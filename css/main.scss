@@ -29,6 +29,13 @@ $subtitle-font: 30pt;
 }
 /*  */
 
+/* Titulos */
+.title {
+  font-size: $title-font;
+  color: $sec;
+}
+/*  */
+
 body {
   margin: 0;
   display: grid;
@@ -85,6 +92,7 @@ body {
   .ultimo {
     grid-area: ultimo;
     background-color: $background;
+    padding: 2rem;
 
     .work-grid {
       display: grid;
@@ -116,6 +124,7 @@ body {
     background-color: $background;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
 
     .content-area {
       display: flex;
@@ -140,13 +149,15 @@ body {
   .nosotros {
     grid-area: nosotros;
     background-color: $background;
+    padding: 2rem;
 
     .card-area {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 15px;
 
       .card {
-        padding: 1rem;
         display: flex;
         flex-direction: column;
 
@@ -159,6 +170,7 @@ body {
         .card-container {
           background-color: #fff;
           color: $background;
+          padding: 1rem;
 
           h4 {
             margin: 0;
@@ -171,12 +183,17 @@ body {
   .contactanos {
     grid-area: contacto;
     background-color: $background;
+    padding: 2rem;
 
     .form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      
+      form {
+        width: 45%;
+      }
 
       .form-field {
         display: flex;
