@@ -1,5 +1,33 @@
 $background: #000;
 $font-color: #fff;
+$primary: #283442;
+$sec: #52f8ff;
+
+$body-font: 18pt;
+$head-font: 30pt;
+$title-font: 22pt;
+$subtitle-font: 30pt;
+
+/* botones */
+.btn {
+  background-color: transparent;
+  border: 1pt solid $font-color;
+  color: $font-color;
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $font-color;
+}
+
+.btn-alt {
+  background-color: transparent;
+  border-color: $primary;
+  color: $primary;
+}
+/*  */
 
 body {
   margin: 0;
@@ -57,6 +85,30 @@ body {
   .ultimo {
     grid-area: ultimo;
     background-color: $background;
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 15px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+          background-color: #fff;
+          width: 100%;
+
+          &:hover {
+            cursor: pointer;
+            filter: brightness(70%);
+          }
+        }
+      }
+    }
   }
 
   .reels {
@@ -130,15 +182,37 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-bottom: 1rem;
+
+        input,
+        textarea {
+          background-color: transparent;
+          border-top: 0;
+          border-right: 0;
+          border-left: 0;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          resize: none;
+          transition: all 0.2s ease-in;
+
+          &:focus {
+            outline: none;
+            border-bottom: 2px solid #fff;
+          }
+        }
+      }
+
+      button {
+        float: right;
       }
     }
   }
 
   .footer {
-      grid-area: footer;
+    grid-area: footer;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

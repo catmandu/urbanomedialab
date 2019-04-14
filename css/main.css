@@ -1,3 +1,24 @@
+/* botones */
+.btn {
+  background-color: transparent;
+  border: 1pt solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+  background-color: #283442;
+  border-color: #283442;
+  color: #fff;
+}
+
+.btn-alt {
+  background-color: transparent;
+  border-color: #283442;
+  color: #283442;
+}
+
+/*  */
 body {
   margin: 0;
   display: -ms-grid;
@@ -70,6 +91,42 @@ body .ultimo {
   -ms-grid-column: 1;
   grid-area: ultimo;
   background-color: #000;
+}
+
+body .ultimo .work-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+body .ultimo .work-grid .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .ultimo .work-grid .item .card {
+  background-color: #fff;
+  width: 100%;
+}
+
+body .ultimo .work-grid .item .card:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 
 body .reels {
@@ -195,6 +252,30 @@ body .contactanos .form .form-field {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 1rem;
+}
+
+body .contactanos .form .form-field input,
+body .contactanos .form .form-field textarea {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  resize: none;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+body .contactanos .form .form-field input:focus,
+body .contactanos .form .form-field textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+
+body .contactanos .form button {
+  float: right;
 }
 
 body .footer {
