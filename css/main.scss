@@ -1,0 +1,144 @@
+$background: #000;
+$font-color: #fff;
+
+body {
+  margin: 0;
+  display: grid;
+  height: 100vh;
+  background-color: $background;
+  color: $font-color;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "hero"
+    "ultimo"
+    "reels"
+    "nosotros"
+    "contacto"
+    "footer";
+
+  .overlay {
+    background-color: $background;
+  }
+
+  .hero {
+    grid-area: hero;
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-top {
+    // grid-area: navbar;
+    height: 76px;
+    width: 100%;
+    background-color: $background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    .menu-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .ultimo {
+    grid-area: ultimo;
+    background-color: $background;
+  }
+
+  .reels {
+    grid-area: reels;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+
+    .content-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          background-color: $font-color;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+  .nosotros {
+    grid-area: nosotros;
+    background-color: $background;
+
+    .card-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .card {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        img {
+          background-color: #000;
+          height: 13rem;
+          width: 100%;
+        }
+
+        .card-container {
+          background-color: #fff;
+          color: $background;
+
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .contactanos {
+    grid-area: contacto;
+    background-color: $background;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .form-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+
+  .footer {
+      grid-area: footer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
