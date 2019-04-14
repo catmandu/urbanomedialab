@@ -93,12 +93,16 @@ body {
     grid-area: ultimo;
     background-color: $background;
     padding: 2rem;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
 
     .work-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 10px;
       grid-row-gap: 15px;
+      height: 100%;
 
       .item {
         display: flex;
@@ -125,11 +129,13 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    height: 35vh;
 
     .content-area {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
+      height: 100%;
 
       div {
         display: flex;
@@ -141,6 +147,7 @@ body {
           background-color: $font-color;
           height: 2rem;
           width: 2rem;
+          margin-bottom: 1rem;
         }
       }
     }
