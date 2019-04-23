@@ -3,10 +3,49 @@ $font-color: #fff;
 $primary: #283442;
 $sec: #52f8ff;
 
-$body-font: 18pt;
-$head-font: 30pt;
-$title-font: 22pt;
-$subtitle-font: 30pt;
+$title-font: 14pt;
+$subtitle-font: 12pt;
+$body-font: 9pt;
+
+$form-font: 7pt;
+$btn-font: 6pt;
+
+/* fonts */
+@font-face {
+  font-family: "Open Sans Condenced Bold";
+  src: local("OpenSans-CondBold"), url(../assets/fonts/OpenSans-CondBold.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans Condenced Light";
+  src: local("OpenSans-CondLight"), url(../assets/fonts/OpenSans-CondLight.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans Condenced Light Italic";
+  src: local("OpenSans-CondLightItalic"), url(../assets/fonts/OpenSans-CondLightItalic.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Bold";
+  src: local("Oswald-Bold"), url(../assets/fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Light";
+  src: local("Oswald-Light"), url(../assets/fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Regular";
+  src: local("Oswald-Regular"), url(../assets/fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato Light";
+  src: local("Lato-Light"), url(../assets/fonts/Lato-Light.ttf);
+}
+/* -- */
 
 /* botones */
 .btn {
@@ -14,6 +53,8 @@ $subtitle-font: 30pt;
   border: 1pt solid $font-color;
   color: $font-color;
   padding: 0.5rem 1rem;
+  font-family: "Lato Light";
+  font-size: $btn-font;
 }
 
 .btn-primary {
@@ -31,8 +72,14 @@ $subtitle-font: 30pt;
 
 /* Titulos */
 .title {
+  font-family: "Open Sans Condenced Bold";
   font-size: $title-font;
   color: $sec;
+  margin: 1.5rem 0;
+
+  span {
+    border-bottom: 1px solid $sec;
+  }
 }
 /*  */
 
@@ -64,6 +111,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .leme {
+      font-family: "Open Sans Condenced Bold";
+      font-size: $title-font;
+    }
   }
 
   .navbar-top {
@@ -76,6 +128,7 @@ body {
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 2;
 
     .menu-list {
       list-style: none;
@@ -85,6 +138,17 @@ body {
       li {
         float: left;
         padding: 1rem;
+
+        .btn-menu {
+          font-family: "Open Sans Condenced Bold";
+          font-size: $body-font;
+          color: $font-color;
+          text-decoration: none;
+
+          &.active {
+            color: $sec;
+          }
+        }
       }
     }
   }
@@ -93,7 +157,6 @@ body {
     grid-area: ultimo;
     background-color: $background;
     padding: 2rem;
-    height: 50vh;
     display: flex;
     flex-direction: column;
 
@@ -109,14 +172,31 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        max-height: 15rem;
+
+        &:hover > .card {
+          transform: scale(1.2) !important;
+        }
 
         .card {
-          background-color: #fff;
-          width: 100%;
+          // background-color: #fff;
+          // width: 100%;
+          // height: 13rem;
+          // background-image: url(https://material.angular.io/assets/img/examples/shiba2.jpg);
+          // background-repeat: no-repeat;
+          // background-size: cover;
+          transition: all ease-in 0.2s;
+          max-height: inherit;
 
           &:hover {
             cursor: pointer;
-            filter: brightness(70%);
+            transform: scale(1.2) !important;
+            // filter: brightness(70%);
+          }
+
+          img {
+            max-width: 100%;
           }
         }
       }
@@ -157,6 +237,8 @@ body {
     grid-area: nosotros;
     background-color: $background;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
 
     .card-area {
       display: grid;
@@ -180,7 +262,14 @@ body {
           padding: 1rem;
 
           h4 {
+            font-family: "Open Sans Condenced Bold";
+            font-size: $subtitle-font;
             margin: 0;
+          }
+
+          small {
+            font-family: "Open Sans Condenced Light";
+            font-size: $subtitle-font;
           }
         }
       }
@@ -191,13 +280,17 @@ body {
     grid-area: contacto;
     background-color: $background;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
 
     .form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
+      font-family: "Lato Light";
+      font-size: $subtitle-font;
+
       form {
         width: 45%;
       }
@@ -207,6 +300,14 @@ body {
         flex-direction: column;
         justify-content: center;
         padding-bottom: 1rem;
+
+        label {
+
+          span {
+            color: #FF0000;
+          }
+
+        }
 
         input,
         textarea {
@@ -223,6 +324,8 @@ body {
             outline: none;
             border-bottom: 2px solid #fff;
           }
+
+          
         }
       }
 

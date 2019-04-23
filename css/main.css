@@ -1,9 +1,48 @@
+/* fonts */
+@font-face {
+  font-family: "Open Sans Condenced Bold";
+  src: local("OpenSans-CondBold"), url(../assets/fonts/OpenSans-CondBold.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans Condenced Light";
+  src: local("OpenSans-CondLight"), url(../assets/fonts/OpenSans-CondLight.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans Condenced Light Italic";
+  src: local("OpenSans-CondLightItalic"), url(../assets/fonts/OpenSans-CondLightItalic.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Bold";
+  src: local("Oswald-Bold"), url(../assets/fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Light";
+  src: local("Oswald-Light"), url(../assets/fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Regular";
+  src: local("Oswald-Regular"), url(../assets/fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato Light";
+  src: local("Lato-Light"), url(../assets/fonts/Lato-Light.ttf);
+}
+
+/* -- */
 /* botones */
 .btn {
   background-color: transparent;
   border: 1pt solid #fff;
   color: #fff;
   padding: 0.5rem 1rem;
+  font-family: "Lato Light";
+  font-size: 6pt;
 }
 
 .btn-primary {
@@ -21,8 +60,14 @@
 /*  */
 /* Titulos */
 .title {
-  font-size: 22pt;
+  font-family: "Open Sans Condenced Bold";
+  font-size: 14pt;
   color: #52f8ff;
+  margin: 1.5rem 0;
+}
+
+.title span {
+  border-bottom: 1px solid #52f8ff;
 }
 
 /*  */
@@ -65,6 +110,11 @@ body .hero {
           align-items: center;
 }
 
+body .hero .leme {
+  font-family: "Open Sans Condenced Bold";
+  font-size: 14pt;
+}
+
 body .navbar-top {
   height: 76px;
   width: 100%;
@@ -80,6 +130,7 @@ body .navbar-top {
           align-items: center;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 body .navbar-top .menu-list {
@@ -93,13 +144,23 @@ body .navbar-top .menu-list li {
   padding: 1rem;
 }
 
+body .navbar-top .menu-list li .btn-menu {
+  font-family: "Open Sans Condenced Bold";
+  font-size: 9pt;
+  color: #fff;
+  text-decoration: none;
+}
+
+body .navbar-top .menu-list li .btn-menu.active {
+  color: #52f8ff;
+}
+
 body .ultimo {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: ultimo;
   background-color: #000;
   padding: 2rem;
-  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,17 +194,29 @@ body .ultimo .work-grid .item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  max-height: 15rem;
+}
+
+body .ultimo .work-grid .item:hover > .card {
+  -webkit-transform: scale(1.2) !important;
+          transform: scale(1.2) !important;
 }
 
 body .ultimo .work-grid .item .card {
-  background-color: #fff;
-  width: 100%;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+  max-height: inherit;
 }
 
 body .ultimo .work-grid .item .card:hover {
   cursor: pointer;
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  -webkit-transform: scale(1.2) !important;
+          transform: scale(1.2) !important;
+}
+
+body .ultimo .work-grid .item .card img {
+  max-width: 100%;
 }
 
 body .reels {
@@ -205,6 +278,13 @@ body .nosotros {
   grid-area: nosotros;
   background-color: #000;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .nosotros .card-area {
@@ -239,7 +319,14 @@ body .nosotros .card-area .card .card-container {
 }
 
 body .nosotros .card-area .card .card-container h4 {
+  font-family: "Open Sans Condenced Bold";
+  font-size: 12pt;
   margin: 0;
+}
+
+body .nosotros .card-area .card .card-container small {
+  font-family: "Open Sans Condenced Light";
+  font-size: 12pt;
 }
 
 body .contactanos {
@@ -248,6 +335,13 @@ body .contactanos {
   grid-area: contacto;
   background-color: #000;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .contactanos .form {
@@ -264,6 +358,8 @@ body .contactanos .form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Lato Light";
+  font-size: 12pt;
 }
 
 body .contactanos .form form {
@@ -282,6 +378,10 @@ body .contactanos .form .form-field {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 1rem;
+}
+
+body .contactanos .form .form-field label span {
+  color: #FF0000;
 }
 
 body .contactanos .form .form-field input,
