@@ -7,169 +7,180 @@
     <title>Urbano</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
 </head>
 
 <body>
 
-    <div class="overlay">
-        <img src="...">
-    </div>
 
-    <div class="hero">
-        <p class="leme">
-            CORRECCIÓN DE COLOR & POST PRODUCCIÓN
-        </p>
-        <div class="btns">
-            <button class="btn">lo último</button>
-            <button class="btn">reels</button>
-        </div>
-    </div>
+    <div id="navbar" class="navbar-top">
+        <img src="./assets/img/U1_fondonegro.svg" class="img-logo">
 
-    <div class="navbar-top">
-        <img src="...">
-
-        <ul class="menu-list">
-            <li>
-                <a href="#lo-ultimo" class="btn-menu">LO ÚLTIMO</a>
+        <ul class="menu-list" id="menu">
+            <li data-menuanchor="hero">
+                <a href="#hero" class="btn-menu">INICIO</a>
             </li>
-            <li>
-                <a href="#reel" class="btn-menu">REELS</a>
+            <li data-menuanchor="ultimo">
+                <a href="#ultimo" class="btn-menu">LO ÚLTIMO</a>
             </li>
-            <li>
-                <a href="#nosotro" class="btn-menu">NOSOTROS</a>
+            <li data-menuanchor="reels">
+                <a href="#reels" class="btn-menu">REELS</a>
             </li>
-            <li>
-                <a href="#contacta" class="btn-menu">CONTÁCTANOS</a>
+            <li data-menuanchor="nosotros">
+                <a href="#nosotros" class="btn-menu">NOSOTROS</a>
+            </li>
+            <li data-menuanchor="contacto">
+                <a href="#contacto" class="btn-menu">CONTÁCTANOS</a>
             </li>
         </ul>
     </div>
 
-    <div class="ultimo">
-        <label class="title" id="lo-ultimo"><span>LO ÚLTIMO</span></label>
-        <div class="work-grid">
+    <div id="papeleo" class="papeles">
 
-            <div class="item">
-                <div class="card escenas" data-hover-only="true" data-relative-input="true">
-                    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" data-depth="0.4">
-                </div>
-            </div>
+        <div id="her" class="hero section">
 
-            <div class="item">
-                <div class="card escenas" data-hover-only="true" data-relative-input="true">
-                    <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg" data-depth="0.4">
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="card escenas" data-hover-only="true" data-relative-input="true">
-                    <img src="http://ecuatorianoenvivo.com/wp-content/uploads/2015/04/364.jpg" data-depth="0.4">
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="card escenas" data-hover-only="true" data-relative-input="true">
-                    <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg" data-depth="0.4">
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="reels">
-        <label class="title" id="reel"><span>REELS</span></label>
-        <div class="content-area">
-            <div>
-                <img src="./assets/icons/ediciñon on-off.svg">
-                <label>EDICIÓN ONLINE Y OFFLINE</label>
-            </div>
-
-            <div>
-                <img src="./assets/icons/Color_correction.svg">
-                <label>CORRECCIÓN DE COLOR</label>
-            </div>
-
-            <div>
-                <img src="./assets/icons/motion graphics.svg">
-                <label>MOTION GRAPHICS</label>
-            </div>
-
-            <div>
-                <img src="./assets/icons/3d.svg">
-                <label>ANIMACIÓN 3D</label>
-            </div>
-
-            <div>
-                <img>
-                <label>VFX</label>
+            <p class="leme">
+                CORRECCIÓN DE COLOR & POST PRODUCCIÓN
+            </p>
+            <div class="btns">
+                <button class="btn">lo último</button>
+                <button class="btn">reels</button>
             </div>
         </div>
-    </div>
 
-    <div class="nosotros">
-        <label class="title" id="nosotro"><span>NOSOTROS</span></label>
-        <div class="card-area">
-            <div class="card">
-                <img src="https://www.caracteristicas.co/wp-content/uploads/2016/03/12485983163_83defddf78_k-e1489084789639.jpg">
-                <div class="card-container">
-                    <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                    <small>EDITOR/POST PRODUCTOR</small>
+
+
+        <div class="ultimo section pp-scrollable">
+            <label class="title" id="lo-ultimo"><span>LO ÚLTIMO</span></label>
+            <div class="work-grid">
+
+                <div class="item">
+                    <div class="card escenas" data-hover-only="true" data-relative-input="true">
+                        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" data-depth="0.4">
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="http://ecuatorianoenvivo.com/wp-content/uploads/2015/04/364.jpg">
-                <div class="card-container">
-                    <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                    <small>EDITOR/POST PRODUCTOR</small>
+
+                <div class="item">
+                    <div class="card escenas" data-hover-only="true" data-relative-input="true">
+                        <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
+                            data-depth="0.4">
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img>
-                <div class="card-container">
-                    <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                    <small>EDITOR/POST PRODUCTOR</small>
+
+                <div class="item">
+                    <div class="card escenas" data-hover-only="true" data-relative-input="true">
+                        <img src="http://ecuatorianoenvivo.com/wp-content/uploads/2015/04/364.jpg" data-depth="0.4">
+                    </div>
                 </div>
+
+                <div class="item">
+                    <div class="card escenas" data-hover-only="true" data-relative-input="true">
+                        <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
+                            data-depth="0.4">
+                    </div>
+                </div>
+
             </div>
-            <div class="card">
-                <img>
-                <div class="card-container">
-                    <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                    <small>EDITOR/POST PRODUCTOR</small>
+        </div>
+
+        <div class="reels section">
+            <label class="title" id="reel"><span>REELS</span></label>
+            <div class="content-area">
+                <div>
+                    <img src="./assets/icons/ediciñon on-off.svg">
+                    <label>EDICIÓN ONLINE Y OFFLINE</label>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/Color_correction.svg">
+                    <label>CORRECCIÓN DE COLOR</label>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/motion graphics.svg">
+                    <label>MOTION GRAPHICS</label>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/3d.svg">
+                    <label>ANIMACIÓN 3D</label>
+                </div>
+
+                <div>
+                    <img>
+                    <label>VFX</label>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="contactanos">
-        <label class="title" id="contacta"><span>CONTACTANOS</span></label>
-        <div class="form">
-            <form action="">
-                <div class="form-field">
-                    <label>Name<span>*</span></label>
-                    <input type="text">
+        <div class="nosotros section pp-scrollable">
+            <label class="title" id="nosotro"><span>NOSOTROS</span></label>
+            <div class="card-area">
+                <div class="card">
+                    <img
+                        src="https://www.caracteristicas.co/wp-content/uploads/2016/03/12485983163_83defddf78_k-e1489084789639.jpg">
+                    <div class="card-container">
+                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
+                        <small>EDITOR/POST PRODUCTOR</small>
+                    </div>
                 </div>
-                <div class="form-field">
-                    <label>e-mail<span>*</span></label>
-                    <input type="email">
+                <div class="card">
+                    <img src="http://ecuatorianoenvivo.com/wp-content/uploads/2015/04/364.jpg">
+                    <div class="card-container">
+                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
+                        <small>EDITOR/POST PRODUCTOR</small>
+                    </div>
                 </div>
-                <div class="form-field">
-                    <label>Phone</label>
-                    <input type="tel">
+                <div class="card">
+                    <img>
+                    <div class="card-container">
+                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
+                        <small>EDITOR/POST PRODUCTOR</small>
+                    </div>
                 </div>
-                <div class="form-field">
-                    <label>Message<span>*</span></label>
-                    <textarea></textarea>
+                <div class="card">
+                    <img>
+                    <div class="card-container">
+                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
+                        <small>EDITOR/POST PRODUCTOR</small>
+                    </div>
                 </div>
-                <button class="btn">Send Email</button>
-            </form>
+            </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <smal>DERECHOS RESERVADOS URBANO MEDIA LAB 2019</smal>
+        <div class="contactanos section">
+            <label class="title" id="contacta"><span>CONTACTANOS</span></label>
+            <div class="form">
+                <form action="">
+                    <div class="form-field">
+                        <label>Name<span>*</span></label>
+                        <input type="text">
+                    </div>
+                    <div class="form-field">
+                        <label>e-mail<span>*</span></label>
+                        <input type="email">
+                    </div>
+                    <div class="form-field">
+                        <label>Phone</label>
+                        <input type="tel">
+                    </div>
+                    <div class="form-field">
+                        <label>Message<span>*</span></label>
+                        <textarea></textarea>
+                    </div>
+                    <button class="btn">Send Email</button>
+                </form>
+            </div>
+
+            <smal>DERECHOS RESERVADOS URBANO MEDIA LAB 2019</smal>
+        </div>
     </div>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.js"></script>
     <script src="./js/parallax.js"></script>
     <script src="./js/main.js"></script>
 </body>

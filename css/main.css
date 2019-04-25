@@ -80,42 +80,15 @@ body {
   color: #fff;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  -ms-grid-rows: auto 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas: "hero" "ultimo" "reels" "nosotros" "contacto" "footer";
-}
-
-body .overlay {
-  background-color: #000;
-}
-
-body .hero {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: hero;
-  height: 100vh;
-  background-color: gray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .hero .leme {
-  font-family: "Open Sans Condenced Bold";
-  font-size: 14pt;
+  -ms-grid-rows: 76px 1fr;
+      grid-template-rows: 76px 1fr;
+      grid-template-areas: "navbar" "papeles";
 }
 
 body .navbar-top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navbar;
   height: 76px;
   width: 100%;
   background-color: #000;
@@ -130,7 +103,13 @@ body .navbar-top {
           align-items: center;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 100;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+body .navbar-top .img-logo {
+  width: 4rem;
 }
 
 body .navbar-top .menu-list {
@@ -151,13 +130,73 @@ body .navbar-top .menu-list li .btn-menu {
   text-decoration: none;
 }
 
-body .navbar-top .menu-list li .btn-menu.active {
+body .navbar-top .menu-list li.active a {
   color: #52f8ff;
 }
 
-body .ultimo {
+body .papeles {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
+  grid-area: papeles;
+  position: relative;
+  height: 100%;
+}
+
+body .overlay {
+  grid-area: overlay;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .hero {
+  grid-area: hero;
+  height: 100%;
+  background-color: transparent;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  background-image: url("../assets/img/6XxLQkY.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  width: 100vw;
+  text-align: center;
+}
+
+body .hero .leme {
+  font-family: "Open Sans Condenced Bold";
+  font-size: 14pt;
+  z-index: 2;
+}
+
+body .hero .btns {
+  z-index: 2;
+}
+
+body .ultimo {
   grid-area: ultimo;
   background-color: #000;
   padding: 2rem;
@@ -168,6 +207,7 @@ body .ultimo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 2;
 }
 
 body .ultimo .work-grid {
@@ -220,8 +260,6 @@ body .ultimo .work-grid .item .card img {
 }
 
 body .reels {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: reels;
   background-color: #000;
   display: -webkit-box;
@@ -232,7 +270,8 @@ body .reels {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem;
-  height: 35vh;
+  height: 100%;
+  z-index: 2;
 }
 
 body .reels .content-area {
@@ -273,8 +312,6 @@ body .reels .content-area div img {
 }
 
 body .nosotros {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: nosotros;
   background-color: #000;
   padding: 2rem;
@@ -285,6 +322,7 @@ body .nosotros {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 2;
 }
 
 body .nosotros .card-area {
@@ -308,7 +346,7 @@ body .nosotros .card-area .card {
 
 body .nosotros .card-area .card img {
   background-color: #000;
-  height: 13rem;
+  height: 20rem;
   width: 100%;
 }
 
@@ -330,8 +368,6 @@ body .nosotros .card-area .card .card-container small {
 }
 
 body .contactanos {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
   grid-area: contacto;
   background-color: #000;
   padding: 2rem;
@@ -342,6 +378,7 @@ body .contactanos {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 2;
 }
 
 body .contactanos .form {
@@ -381,7 +418,7 @@ body .contactanos .form .form-field {
 }
 
 body .contactanos .form .form-field label span {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 body .contactanos .form .form-field input,
@@ -395,6 +432,7 @@ body .contactanos .form .form-field textarea {
   resize: none;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  font-size: 1.2rem;
 }
 
 body .contactanos .form .form-field input:focus,
@@ -403,14 +441,19 @@ body .contactanos .form .form-field textarea:focus {
   border-bottom: 2px solid #fff;
 }
 
+body .contactanos .form .form-field textarea {
+  height: 6rem;
+}
+
 body .contactanos .form button {
   float: right;
 }
 
 body .footer {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
   grid-area: footer;
+  z-index: 2;
+  padding: 2rem 0;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,5 +463,26 @@ body .footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.pp-tableCell {
+  display: inherit;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -ms-flex-line-pack: inherit;
+      align-content: inherit;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pp-section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=main.css.map */

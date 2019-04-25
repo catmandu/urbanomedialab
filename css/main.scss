@@ -90,36 +90,13 @@ body {
   background-color: $background;
   color: $font-color;
   grid-template-columns: auto;
-  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 76px 1fr;
   grid-template-areas:
-    "hero"
-    "ultimo"
-    "reels"
-    "nosotros"
-    "contacto"
-    "footer";
-
-  .overlay {
-    background-color: $background;
-  }
-
-  .hero {
-    grid-area: hero;
-    height: 100vh;
-    background-color: gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .leme {
-      font-family: "Open Sans Condenced Bold";
-      font-size: $title-font;
-    }
-  }
+    "navbar"
+    "papeles";
 
   .navbar-top {
-    // grid-area: navbar;
+    grid-area: navbar;
     height: 76px;
     width: 100%;
     background-color: $background;
@@ -128,8 +105,12 @@ body {
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 100;
+    transition: all 0.3s ease-in;
 
+    .img-logo {
+      width: 4rem;
+    }
     .menu-list {
       list-style: none;
       margin: 0;
@@ -145,11 +126,57 @@ body {
           color: $font-color;
           text-decoration: none;
 
-          &.active {
+          
+        }
+        &.active {
+          a {
             color: $sec;
           }
+          
         }
       }
+    }
+  }
+
+  .papeles {
+    grid-area: papeles;
+    position: relative;
+    height: 100%;
+  }
+  .overlay {
+    grid-area: overlay;
+    // background-color: $background;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero {
+    grid-area: hero;
+    height: 100%;
+    background-color: transparent;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-image: url("../assets/img/6XxLQkY.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    width: 100vw;
+    text-align: center;
+
+    .leme {
+      font-family: "Open Sans Condenced Bold";
+      font-size: $title-font;
+      z-index: 2;
+    }
+
+    .btns {
+      z-index: 2;
     }
   }
 
@@ -159,6 +186,7 @@ body {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 
     .work-grid {
       display: grid;
@@ -209,7 +237,8 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    height: 35vh;
+    height: 100%;
+    z-index: 2;
 
     .content-area {
       display: flex;
@@ -239,6 +268,7 @@ body {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 
     .card-area {
       display: grid;
@@ -252,7 +282,7 @@ body {
 
         img {
           background-color: #000;
-          height: 13rem;
+          height: 20rem;
           width: 100%;
         }
 
@@ -282,6 +312,7 @@ body {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 
     .form {
       display: flex;
@@ -302,11 +333,9 @@ body {
         padding-bottom: 1rem;
 
         label {
-
           span {
-            color: #FF0000;
+            color: #ff0000;
           }
-
         }
 
         input,
@@ -319,13 +348,16 @@ body {
           color: #fff;
           resize: none;
           transition: all 0.2s ease-in;
+          font-size: 1.2rem;
 
           &:focus {
             outline: none;
             border-bottom: 2px solid #fff;
           }
+        }
 
-          
+        textarea {
+          height: 6rem;
         }
       }
 
@@ -337,9 +369,26 @@ body {
 
   .footer {
     grid-area: footer;
+    z-index: 2;
+    padding: 2rem 0;
+    background-color: #000;
 
     display: flex;
     justify-content: center;
     align-items: center;
   }
+}
+
+.pp-tableCell {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-content: inherit;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.pp-section {
+  box-sizing: border-box;
 }
