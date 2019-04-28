@@ -42,7 +42,8 @@
   color: #fff;
   padding: 0.5rem 1rem;
   font-family: "Lato Light";
-  font-size: 6pt;
+  font-size: 12pt;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -61,7 +62,7 @@
 /* Titulos */
 .title {
   font-family: "Open Sans Condenced Bold";
-  font-size: 14pt;
+  font-size: 24pt;
   color: #52f8ff;
   margin: 1.5rem 0;
 }
@@ -125,7 +126,7 @@ body .navbar-top .menu-list li {
 
 body .navbar-top .menu-list li .btn-menu {
   font-family: "Open Sans Condenced Bold";
-  font-size: 9pt;
+  font-size: 14pt;
   color: #fff;
   text-decoration: none;
 }
@@ -188,7 +189,7 @@ body .hero {
 
 body .hero .leme {
   font-family: "Open Sans Condenced Bold";
-  font-size: 14pt;
+  font-size: 24pt;
   z-index: 2;
 }
 
@@ -199,7 +200,7 @@ body .hero .btns {
 body .ultimo {
   grid-area: ultimo;
   background-color: #000;
-  padding: 2rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,7 +218,6 @@ body .ultimo .work-grid {
       grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 15px;
-  height: 100%;
 }
 
 body .ultimo .work-grid .item {
@@ -236,6 +236,7 @@ body .ultimo .work-grid .item {
           align-items: center;
   overflow: hidden;
   max-height: 15rem;
+  cursor: pointer;
 }
 
 body .ultimo .work-grid .item:hover > .card {
@@ -257,6 +258,152 @@ body .ultimo .work-grid .item .card:hover {
 
 body .ultimo .work-grid .item .card img {
   max-width: 100%;
+}
+
+body .ultimo .card-modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .ultimo .card-modal.active {
+  position: -webkit-sticky;
+  position: sticky;
+  opacity: 1;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+body .ultimo .card-modal.active.back-faded {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body .ultimo .card-modal .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .ultimo .card-modal .content.active {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+body .ultimo .card-modal .content .sec-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-image: url(https://material.angular.io/assets/img/examples/shiba2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: auto;
+  width: 38rem;
+  max-width: 38rem;
+}
+
+body .ultimo .card-modal .content .sec-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding: 0 2rem 2rem 2rem;
+}
+
+body .ultimo .card-modal .content .sec-info .sec-title {
+  margin-bottom: 0;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20pt;
+  font-family: "Open Sans Condenced Bold";
+}
+
+body .ultimo .card-modal .content .sec-info .sec-title .title {
+  color: #fff;
+}
+
+body .ultimo .card-modal .content .sec-info .sec-title .close-modal {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  cursor: pointer !important;
+}
+
+body .ultimo .card-modal .content .sec-info .description {
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5rem;
+  font-family: "Open Sans Condenced Light";
+  font-size: 16pt;
+}
+
+body .ultimo .card-modal .content .sec-info .btn-area {
+  text-align: right;
 }
 
 body .reels {
@@ -305,10 +452,19 @@ body .reels .content-area div {
 }
 
 body .reels .content-area div img {
-  background-color: #fff;
   height: 2rem;
   width: 2rem;
   margin-bottom: 1rem;
+}
+
+body .reels .content-area div label {
+  font-family: "Open Sans Condenced Bold";
+  font-size: 16pt;
+}
+
+body .reels .content-area div span {
+  font-family: "Open Sans Condenced Light";
+  font-size: 16pt;
 }
 
 body .nosotros {
@@ -358,13 +514,13 @@ body .nosotros .card-area .card .card-container {
 
 body .nosotros .card-area .card .card-container h4 {
   font-family: "Open Sans Condenced Bold";
-  font-size: 12pt;
+  font-size: 20pt;
   margin: 0;
 }
 
 body .nosotros .card-area .card .card-container small {
   font-family: "Open Sans Condenced Light";
-  font-size: 12pt;
+  font-size: 20pt;
 }
 
 body .contactanos {
@@ -396,7 +552,7 @@ body .contactanos .form {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Lato Light";
-  font-size: 12pt;
+  font-size: 20pt;
 }
 
 body .contactanos .form form {

@@ -40,4 +40,21 @@ $(document).ready(function () {
         scrollingSpeed: 300,
         navigation: false
     });
+
+    $(".work-grid .item").click(function () {
+        $("#work-info").addClass("active back-faded");
+        setTimeout(() => {
+            $(".card-modal .content").addClass("active");
+        }, 100);
+        $(".pp-scrollable").css({'overflow-y': 'hidden'});
+    });
+
+    $(".close-modal").click(function() {
+        $(".card-modal .content").removeClass("active");
+        $("#work-info").removeClass("back-faded");
+        setTimeout(() => {
+            $("#work-info").removeClass("active");
+        }, 600);
+        $(".pp-scrollable").css({'overflow-y': 'scroll'});
+    })
 });

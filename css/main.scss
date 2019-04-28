@@ -3,12 +3,12 @@ $font-color: #fff;
 $primary: #283442;
 $sec: #52f8ff;
 
-$title-font: 14pt;
-$subtitle-font: 12pt;
-$body-font: 9pt;
+$title-font: 24pt;
+$subtitle-font: 20pt;
+$body-font: 16pt;
 
-$form-font: 7pt;
-$btn-font: 6pt;
+$form-font: 14pt;
+$btn-font: 12pt;
 
 /* fonts */
 @font-face {
@@ -55,6 +55,7 @@ $btn-font: 6pt;
   padding: 0.5rem 1rem;
   font-family: "Lato Light";
   font-size: $btn-font;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -122,17 +123,14 @@ body {
 
         .btn-menu {
           font-family: "Open Sans Condenced Bold";
-          font-size: $body-font;
+          font-size: $form-font;
           color: $font-color;
           text-decoration: none;
-
-          
         }
         &.active {
           a {
             color: $sec;
           }
-          
         }
       }
     }
@@ -183,7 +181,7 @@ body {
   .ultimo {
     grid-area: ultimo;
     background-color: $background;
-    padding: 2rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -193,7 +191,7 @@ body {
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 10px;
       grid-row-gap: 15px;
-      height: 100%;
+      // height: 100%;
 
       .item {
         display: flex;
@@ -202,6 +200,7 @@ body {
         align-items: center;
         overflow: hidden;
         max-height: 15rem;
+        cursor: pointer;
 
         &:hover > .card {
           transform: scale(1.2) !important;
@@ -225,6 +224,106 @@ body {
 
           img {
             max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .card-modal {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 5;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      display: none;
+      transition: all 0.5s ease-in-out;
+
+      &.active {
+        position: sticky;
+        opacity: 1;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 5;
+        display: flex;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transform: scale(1, 1);
+
+        &.back-faded {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: scale(0, 0);
+        transition: all 0.5s ease-in-out;
+
+        &.active {
+          transform: scale(1, 1);
+        }
+
+        .sec-img {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+
+          background-image: url(https://material.angular.io/assets/img/examples/shiba2.jpg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          height: auto;
+          width: 38rem;
+          max-width: 38rem;
+        }
+
+        .sec-info {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 2;
+          padding: 0 2rem 2rem 2rem;
+
+          .sec-title {
+            margin-bottom: 0;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: $subtitle-font;
+            font-family: "Open Sans Condenced Bold";
+
+            .title {
+              color: #fff;
+            }
+
+            .close-modal {
+              align-self: flex-start;
+              cursor: pointer !important;
+            }
+          }
+
+          .description {
+            justify-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 0 5rem;
+            font-family: "Open Sans Condenced Light";
+            font-size: $body-font;
+          }
+
+          .btn-area {
+            text-align: right;
           }
         }
       }
@@ -253,10 +352,19 @@ body {
         align-items: center;
 
         img {
-          background-color: $font-color;
           height: 2rem;
           width: 2rem;
           margin-bottom: 1rem;
+        }
+
+        label {
+          font-family: "Open Sans Condenced Bold";
+          font-size: $body-font;
+        }
+
+        span {
+          font-family: "Open Sans Condenced Light";
+          font-size: $body-font;
         }
       }
     }
@@ -386,7 +494,6 @@ body {
   align-content: inherit;
   width: 100%;
   box-sizing: border-box;
-
 }
 
 .pp-section {

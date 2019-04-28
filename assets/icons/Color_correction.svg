@@ -1,1 +1,23 @@
-<svg height="480pt" viewBox="-8 0 480 480" width="480pt" xmlns="http://www.w3.org/2000/svg"><path d="m192 480h272v-416h-192v-64h-272v416h192zm0-384-5.65625-5.65625-112 112 11.3125 11.3125 106.34375-106.34375v25.375l-69.65625 69.65625 11.3125 11.3125 58.34375-58.34375v84.6875h-144v-192h176v16h-32zm256-16v384h-240v-384zm-432 320v-384h240v48h-16v-32h-208v224h160v144zm0 0"/><path d="m432 96h-208v224h208zm-16 208h-176v-192h176zm0 0"/><path d="m32 272h80v16h-80zm0 0"/><path d="m128 272h16v16h-16zm0 0"/><path d="m32 304h128v16h-128zm0 0"/><path d="m352 336h80v16h-80zm0 0"/><path d="m320 336h16v16h-16zm0 0"/><path d="m304 368h128v16h-128zm0 0"/><path d="m66.339844 162.347656 72-72.003906 11.3125 11.316406-72 72zm0 0"/><path d="m32 336v48h144v-48zm32 32h-16v-16h16zm32 0h-16v-16h16zm32 0h-16v-16h16zm32 0h-16v-16h16zm0 0"/><path d="m416 432h16v16h-16zm0 0"/><path d="m384 176h16v-48h-32v16h16zm0 0"/><path d="m384 192h16v16h-16zm0 0"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M200,480h272V64H280V0H8v416h192V480z M200,96l-5.7-5.7l-112,112l11.3,11.3L200,107.3v25.4l-69.7,69.7
+	l11.3,11.3l58.3-58.3V240H56V48h176v16h-32V96z M456,80v384H216V80H456z M24,400V16h240v48h-16V32H40v224h160v144H24z"/>
+<path class="st0" d="M440,96H232v224h208V96z M424,304H248V112h176V304z"/>
+<path class="st0" d="M40,272h80v16H40V272z"/>
+<path class="st0" d="M136,272h16v16h-16V272z"/>
+<path class="st0" d="M40,304h128v16H40V304z"/>
+<path class="st0" d="M360,336h80v16h-80V336z"/>
+<path class="st0" d="M328,336h16v16h-16V336z"/>
+<path class="st0" d="M312,368h128v16H312V368z"/>
+<path class="st0" d="M74.3,162.3l72-72l11.3,11.3l-72,72L74.3,162.3z"/>
+<path class="st0" d="M40,336v48h144v-48H40z M72,368H56v-16h16V368z M104,368H88v-16h16V368z M136,368h-16v-16h16V368z M168,368h-16
+	v-16h16V368z"/>
+<path class="st0" d="M424,432h16v16h-16V432z"/>
+<path class="st0" d="M392,176h16v-48h-32v16h16V176z"/>
+<path class="st0" d="M392,192h16v16h-16V192z"/>
+</svg>
