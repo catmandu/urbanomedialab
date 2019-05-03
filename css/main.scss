@@ -594,7 +594,10 @@ body {
       justify-content: space-evenly;
       height: 100%;
       align-items: center;
-      cursor: pointer;
+
+      .reel-type {
+        cursor: pointer;
+      }
 
       div {
         display: flex;
