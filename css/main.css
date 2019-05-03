@@ -494,10 +494,8 @@ body .ultimo .card-modal .content .sec-video {
   display: none;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: -webkit-transform 0.5s ease-in;
-  transition: -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 body .ultimo .card-modal .content .sec-video.up {
@@ -532,9 +530,9 @@ body .ultimo .card-modal .content .sec-video .vid-info .close-video {
 body .reels {
   grid-area: reels;
   background-color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -542,6 +540,219 @@ body .reels {
   padding: 2rem;
   height: 100%;
   z-index: 2;
+}
+
+body .reels .card-modal-reel {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .reels .card-modal-reel.active {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 1rem;
+  opacity: 1;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .reels .card-modal-reel.active.back-faded {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body .reels .card-modal-reel.mod-video {
+  height: 100%;
+}
+
+body .reels .card-modal-reel.mod-video .sec-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .reels .card-modal-reel.mod-video .sec-video .video {
+  max-height: 400px;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+body .reels .card-modal-reel .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .reels .card-modal-reel .content.mod-video {
+  height: 100%;
+  width: 100%;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-img {
+  opacity: 0;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-info {
+  opacity: 0;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video .video {
+  max-height: 400px;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+body .reels .card-modal-reel .content .sec-video {
+  display: none;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+body .reels .card-modal-reel .content .sec-video.up {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .reels .card-modal-reel .content .sec-video.down {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+body .reels .card-modal-reel .content .sec-video .vid-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20pt;
+  font-family: "Open Sans Condenced Bold";
+}
+
+body .reels .card-modal-reel .content .sec-video .vid-info .close-video-reel {
+  cursor: pointer !important;
+}
+
+body .reels .sec-video {
+  display: none;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+body .reels .sec-video.up {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .reels .sec-video.down {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+body .reels .sec-video .vid-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20pt;
+  font-family: "Open Sans Condenced Bold";
+}
+
+body .reels .sec-video .vid-info .close-video {
+  cursor: pointer !important;
 }
 
 body .reels .content-area {
@@ -556,6 +767,10 @@ body .reels .content-area {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 body .reels .content-area div {

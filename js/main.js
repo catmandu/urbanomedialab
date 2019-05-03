@@ -77,4 +77,26 @@ $(document).ready(function () {
         }, 600);
 
     })
+
+    $(".reel-type").click(function() {
+        $("#reel-info").addClass("active back-faded");
+        setTimeout(() => {
+            $(".card-modal-reel .content").addClass("active");
+        }, 100);
+    })
+
+    $(".close-video-reel").click(function() {
+        $(".card-modal-reel .content").removeClass("active");
+        $("#reel-info").removeClass("back-faded");
+        setTimeout(() => {
+            $("#reel-info").removeClass("active");
+        }, 600);
+
+        var pa = $(this).closest(".content");
+        var cont = $(this).closest(".sec-video");
+        $(cont).addClass("down");
+        setTimeout(() => {
+            $(cont).removeClass("down");
+        }, 600);
+    })
 });

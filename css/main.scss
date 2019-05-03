@@ -398,7 +398,7 @@ body {
         .sec-video {
           display: none;
           transform: translateY(100%);
-          transition: transform 0.5s ease-in;
+          transition: all 0.5s ease-in;
 
           &.up {
             transform: translateY(0);
@@ -428,17 +428,173 @@ body {
   .reels {
     grid-area: reels;
     background-color: $background;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     padding: 2rem;
     height: 100%;
     z-index: 2;
+
+    .card-modal-reel {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 5;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      display: none;
+      transform: translateY(100%);
+      transition: all 0.5s ease-in-out;
+
+      &.active {
+        position: absolute;
+        box-sizing: border-box;
+        padding: 0 1rem;
+        opacity: 1;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 5;
+        display: flex;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateY(0);
+
+        &.back-faded {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      &.mod-video {
+        height: 100%;
+  
+        .sec-video {
+          display: flex;
+          position: absolute;
+          width: 100%;
+          // background-color: gray;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          transform: translateY(0);
+          flex-direction: column;
+  
+          .video {
+            max-height: 400px;
+            max-width: 800px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: scale(1, 1);
+        transition: all 0.5s ease-in-out;
+
+        &.mod-video {
+          height: 100%;
+          width: 100%;
+
+          .sec-img {
+            opacity: 0;
+          }
+
+          .sec-info {
+            opacity: 0;
+          }
+
+          .sec-video {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            // background-color: gray;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(0);
+            flex-direction: column;
+
+            .video {
+              max-height: 400px;
+              max-width: 800px;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .sec-video {
+          display: none;
+          transform: translateY(100%);
+          transition: all 0.5s ease-in;
+
+          &.up {
+            transform: translateY(0);
+          }
+
+          &.down {
+            transform: translateY(100%);
+          }
+
+          .vid-info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: $subtitle-font;
+            font-family: "Open Sans Condenced Bold";
+
+            .close-video-reel {
+              cursor: pointer !important;
+            }
+          }
+        }
+      }
+    }
+
+    .sec-video {
+      display: none;
+      transform: translateY(100%);
+      transition: transform 0.5s ease-in;
+
+      &.up {
+        transform: translateY(0);
+      }
+
+      &.down {
+        transform: translateY(100%);
+      }
+
+      .vid-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: $subtitle-font;
+        font-family: "Open Sans Condenced Bold";
+
+        .close-video {
+          cursor: pointer !important;
+        }
+      }
+    }
 
     .content-area {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       height: 100%;
+      align-items: center;
+      cursor: pointer;
 
       div {
         display: flex;
