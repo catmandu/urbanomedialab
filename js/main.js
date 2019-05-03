@@ -43,7 +43,7 @@ $(document).ready(function () {
         renderer: 'svg',
         loop: false,
         autoplay: true,
-        path: '../assets/icons/UM_logo.json' // the path to the animation json
+        path: 'assets/icons/UM_logo.json' // the path to the animation json
     });
 
     animation.addEventListener('complete', function () {
