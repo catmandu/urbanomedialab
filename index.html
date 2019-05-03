@@ -13,12 +13,19 @@
 
 <body>
 
+    <div class="overlay">
+        <div id="logo-animation"></div>
+        <div class="leng">
+            <button id="eng" class="btn">ENGLISH</button>
+            <button id="esp" class="btn">ESPAÑOL</button>
+        </div>
+    </div>
 
     <div id="navbar" class="navbar-top">
         <img src="./assets/img/U1_fondonegro.svg" class="img-logo">
 
         <ul class="menu-list" id="menu">
-            <li data-menuanchor="hero">
+            <li data-menuanchor="hero" class="active">
                 <a href="#hero" class="btn-menu">INICIO</a>
             </li>
             <li data-menuanchor="ultimo">
@@ -26,9 +33,6 @@
             </li>
             <li data-menuanchor="reels">
                 <a href="#reels" class="btn-menu">REELS</a>
-            </li>
-            <li data-menuanchor="nosotros">
-                <a href="#nosotros" class="btn-menu">NOSOTROS</a>
             </li>
             <li data-menuanchor="contacto">
                 <a href="#contacto" class="btn-menu">CONTÁCTANOS</a>
@@ -44,12 +48,10 @@
                 CORRECCIÓN DE COLOR & POST PRODUCCIÓN
             </p>
             <div class="btns">
-                <button class="btn" data-menuanchor="ultimo">LO ULTIMO</button>
-                <button class="btn">REELS</button>
+                <button id="to-ultimo" class="btn" data-menuanchor="ultimo">LO ULTIMO</button>
+                <button id="to-reels" class="btn">REELS</button>
             </div>
         </div>
-
-
 
         <div class="ultimo section pp-scrollable">
             <label class="title" id="lo-ultimo"><span>LO ÚLTIMO</span></label>
@@ -59,6 +61,7 @@
                     <div class="card escenas" data-hover-only="true" data-relative-input="true">
                         <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -66,12 +69,14 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto largo largo largo</label>
                 </div>
 
                 <div class="item">
                     <div class="card escenas" data-hover-only="true" data-relative-input="true">
                         <img src="http://ecuatorianoenvivo.com/wp-content/uploads/2015/04/364.jpg" data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -79,6 +84,7 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -86,6 +92,7 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -93,6 +100,7 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -100,6 +108,7 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -107,6 +116,7 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -114,6 +124,7 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
                 <div class="item">
@@ -121,6 +132,7 @@
                         <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
                             data-depth="0.4">
                     </div>
+                    <label class="proyect-title">Nombre del proyecto</label>
                 </div>
 
             </div>
@@ -137,8 +149,13 @@
                             (FVX y POST PRODUCCIÓN).
                         </p>
                         <div class="btn-area">
-                            <button class="btn">VER MÁS</button>
+                            <button class="btn btn-video">VER MÁS</button>
                         </div>
+                    </div>
+                    <div class="sec-video">
+                        <div class="vid-info"><label class="title">SMIRNOFF</label><span class="close-video">x</span></div>
+                        <iframe class="video"></iframe>
+                        <!-- hacer que al hacer click y ver el video se cambie el tamaño al 100% del contenedor  -->
                     </div>
                 </div>
             </div>
@@ -179,41 +196,6 @@
             </div>
         </div>
 
-        <div class="nosotros section pp-scrollable">
-            <label class="title" id="nosotro"><span>NOSOTROS</span></label>
-            <div class="card-area">
-                <div class="card">
-                    <img
-                        src="https://www.caracteristicas.co/wp-content/uploads/2016/03/12485983163_83defddf78_k-e1489084789639.jpg">
-                    <div class="card-container">
-                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                        <small>EDITOR/POST PRODUCTOR</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="http://ecuatorianoenvivo.com/wp-content/uploads/2015/04/364.jpg">
-                    <div class="card-container">
-                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                        <small>EDITOR/POST PRODUCTOR</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img>
-                    <div class="card-container">
-                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                        <small>EDITOR/POST PRODUCTOR</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img>
-                    <div class="card-container">
-                        <h4>FERNANDO FERNANDES FERNANDOZA</h4>
-                        <small>EDITOR/POST PRODUCTOR</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="contactanos section">
             <label class="title" id="contacta"><span>CONTACTANOS</span></label>
             <div class="form">
@@ -236,16 +218,20 @@
                     </div>
                     <button class="btn">Send Email</button>
                 </form>
+
+                <smal>DERECHOS RESERVADOS URBANO MEDIA LAB 2019</smal>
             </div>
 
-            <smal>DERECHOS RESERVADOS URBANO MEDIA LAB 2019</smal>
+
         </div>
     </div>
+
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.pagepiling.min.js"></script>
     <script src="./js/parallax.js"></script>
+    <script src="./js/lottie.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

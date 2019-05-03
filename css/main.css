@@ -129,6 +129,7 @@ body .navbar-top .menu-list li .btn-menu {
   font-size: 14pt;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 body .navbar-top .menu-list li.active a {
@@ -144,8 +145,9 @@ body .papeles {
 }
 
 body .overlay {
-  grid-area: overlay;
+  background-color: #000;
   height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,6 +161,27 @@ body .overlay {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  z-index: 101;
+  -webkit-transition: -webkit-transform 0.8s ease-in;
+  transition: -webkit-transform 0.8s ease-in;
+  transition: transform 0.8s ease-in;
+  transition: transform 0.8s ease-in, -webkit-transform 0.8s ease-in;
+}
+
+body .overlay #logo-animation {
+  height: 70vh;
+}
+
+body .overlay .leng {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+body .overlay .leng #esp {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 body .hero {
@@ -235,13 +258,23 @@ body .ultimo .work-grid .item {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  max-height: 15rem;
+  min-height: 15rem;
   cursor: pointer;
+  position: relative;
+  max-height: 18rem;
 }
 
 body .ultimo .work-grid .item:hover > .card {
   -webkit-transform: scale(1.2) !important;
           transform: scale(1.2) !important;
+}
+
+body .ultimo .work-grid .item .proyect-title {
+  font-family: "Open Sans Condenced Bold";
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 16pt;
 }
 
 body .ultimo .work-grid .item .card {
@@ -325,6 +358,46 @@ body .ultimo .card-modal .content.active {
           transform: scale(1, 1);
 }
 
+body .ultimo .card-modal .content.mod-video {
+  height: 100%;
+}
+
+body .ultimo .card-modal .content.mod-video .sec-img {
+  opacity: 0;
+}
+
+body .ultimo .card-modal .content.mod-video .sec-info {
+  opacity: 0;
+}
+
+body .ultimo .card-modal .content.mod-video .sec-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .ultimo .card-modal .content.mod-video .sec-video .video {
+  max-height: 400px;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
 body .ultimo .card-modal .content .sec-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,6 +479,45 @@ body .ultimo .card-modal .content .sec-info .btn-area {
   text-align: right;
 }
 
+body .ultimo .card-modal .content .sec-video {
+  display: none;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+body .ultimo .card-modal .content .sec-video.up {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .ultimo .card-modal .content .sec-video.down {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+body .ultimo .card-modal .content .sec-video .vid-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20pt;
+  font-family: "Open Sans Condenced Bold";
+}
+
+body .ultimo .card-modal .content .sec-video .vid-info .close-video {
+  cursor: pointer !important;
+}
+
 body .reels {
   grid-area: reels;
   background-color: #000;
@@ -452,8 +564,8 @@ body .reels .content-area div {
 }
 
 body .reels .content-area div img {
-  height: 2rem;
-  width: 2rem;
+  height: 4rem;
+  width: 4rem;
   margin-bottom: 1rem;
 }
 
@@ -502,7 +614,7 @@ body .nosotros .card-area .card {
 
 body .nosotros .card-area .card img {
   background-color: #000;
-  height: 20rem;
+  height: 17rem;
   width: 100%;
 }
 
@@ -527,9 +639,9 @@ body .contactanos {
   grid-area: contacto;
   background-color: #000;
   padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -557,6 +669,7 @@ body .contactanos .form {
 
 body .contactanos .form form {
   width: 45%;
+  margin-bottom: 1.5rem;
 }
 
 body .contactanos .form .form-field {
@@ -571,6 +684,10 @@ body .contactanos .form .form-field {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 1rem;
+}
+
+body .contactanos .form .form-field label {
+  font-size: 14pt;
 }
 
 body .contactanos .form .form-field label span {

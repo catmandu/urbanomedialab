@@ -126,6 +126,7 @@ body {
           font-size: $form-font;
           color: $font-color;
           text-decoration: none;
+          cursor: pointer;
         }
         &.active {
           a {
@@ -141,14 +142,32 @@ body {
     position: relative;
     height: 100%;
   }
+
   .overlay {
-    grid-area: overlay;
-    // background-color: $background;
+    background-color: #000;
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    z-index: 101;
+    transition: transform 0.8s ease-in;
+
+    #logo-animation {
+      height: 70vh;
+    }
+
+    .leng {
+      opacity: 0;
+      transition: all 0.5s ease-in;
+
+      #esp {
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+    }
   }
 
   .hero {
@@ -199,11 +218,21 @@ body {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        max-height: 15rem;
+        min-height: 15rem;
         cursor: pointer;
+        position: relative;
+        max-height: 18rem;
 
         &:hover > .card {
           transform: scale(1.2) !important;
+        }
+
+        .proyect-title {
+          font-family: "Open Sans Condenced Bold";
+          position: absolute;
+          bottom: 1rem;
+          right: 2rem;
+          font-size: $body-font;
         }
 
         .card {
@@ -273,6 +302,38 @@ body {
           transform: scale(1, 1);
         }
 
+        &.mod-video {
+          height: 100%;
+
+          .sec-img {
+            opacity: 0;
+          }
+
+          .sec-info {
+            opacity: 0;
+          }
+
+          .sec-video {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            // background-color: gray;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(0);
+            flex-direction: column;
+
+            .video {
+              max-height: 400px;
+              max-width: 800px;
+              width: 100%;
+              height: 100%;
+            }
+
+          }
+        }
+
         .sec-img {
           display: flex;
           flex-direction: column;
@@ -326,6 +387,32 @@ body {
             text-align: right;
           }
         }
+        .sec-video {
+          display: none;
+          transform: translateY(100%);
+          transition: transform 0.5s ease-in;
+
+          &.up {
+            transform: translateY(0);
+          }
+
+          &.down {
+            transform: translateY(100%); 
+          }
+
+          .vid-info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: $subtitle-font;
+            font-family: "Open Sans Condenced Bold";
+            
+            .close-video {
+              cursor: pointer !important;
+            }
+          }
+        }
       }
     }
   }
@@ -352,8 +439,8 @@ body {
         align-items: center;
 
         img {
-          height: 2rem;
-          width: 2rem;
+          height: 4rem;
+          width: 4rem;
           margin-bottom: 1rem;
         }
 
@@ -390,7 +477,7 @@ body {
 
         img {
           background-color: #000;
-          height: 20rem;
+          height: 17rem;
           width: 100%;
         }
 
@@ -418,7 +505,7 @@ body {
     grid-area: contacto;
     background-color: $background;
     padding: 2rem;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     z-index: 2;
 
@@ -432,6 +519,7 @@ body {
 
       form {
         width: 45%;
+        margin-bottom: 1.5rem;
       }
 
       .form-field {
@@ -441,6 +529,7 @@ body {
         padding-bottom: 1rem;
 
         label {
+          font-size: $form-font;
           span {
             color: #ff0000;
           }
