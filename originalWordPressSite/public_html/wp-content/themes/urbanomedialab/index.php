@@ -26,16 +26,16 @@ get_header();
 
     <ul class="menu-list" id="menu">
         <li data-menuanchor="hero" class="active">
-            <a href="#hero" class="btn-menu">INICIO</a>
+            <a href="#hero" class="btn-menu" data-lng="start">INCIO</a>
         </li>
         <li data-menuanchor="ultimo">
-            <a href="#ultimo" class="btn-menu">LO ÚLTIMO</a>
+            <a href="#ultimo" class="btn-menu" data-lng="latest">LO ÚLTIMO</a>
         </li>
         <li data-menuanchor="reels">
-            <a href="#reels" class="btn-menu">REELS</a>
+            <a href="#reels" class="btn-menu" data-lng="reels">REELS</a>
         </li>
         <li data-menuanchor="contacto">
-            <a href="#contacto" class="btn-menu">CONTÁCTANOS</a>
+            <a href="#contacto" class="btn-menu" data-lng="contact">CONTÁCTANOS</a>
         </li>
     </ul>
 </div>
