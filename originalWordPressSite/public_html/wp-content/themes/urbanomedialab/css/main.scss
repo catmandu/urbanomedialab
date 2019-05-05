@@ -1,7 +1,7 @@
 $background: #000;
 $font-color: #fff;
 $primary: #283442;
-$sec: #52f8ff;
+$sec: #9c9c9c;
 
 $title-font: 24pt;
 $subtitle-font: 20pt;
@@ -193,6 +193,7 @@ body {
       background-size: cover;
       background-repeat: no-repeat;
       background-blend-mode: luminosity;
+      background-position: center;
       filter: brightness(0.7);
     }
     .leme {
@@ -220,6 +221,14 @@ body {
       grid-column-gap: 10px;
       grid-row-gap: 15px;
       // height: 100%;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+      }
 
       .item {
         display: flex;
@@ -307,6 +316,11 @@ body {
         transform: scale(0, 0);
         transition: all 0.5s ease-in-out;
 
+        @media (max-width: 576px) {
+          flex-direction: column;
+
+        }
+
         &.active {
           transform: scale(1, 1);
         }
@@ -352,8 +366,15 @@ body {
           background-repeat: no-repeat;
           background-position: bottom;
           height: auto;
-          width: 38rem;
           max-width: 38rem;
+          background-position: center;
+
+          @media (max-width: 576px) {
+            height: 100%;
+            height: 12rem;
+            max-height: 12rem;
+            margin-top: 1rem;
+          }
         }
 
         .sec-info {
@@ -361,6 +382,11 @@ body {
           flex-direction: column;
           flex-grow: 2;
           padding: 0 2rem 2rem 2rem;
+          flex-basis: 0;
+
+          @media (max-width: 576px) {
+            padding: 1rem 1rem;
+          }
 
           .sec-title {
             margin-bottom: 0;
@@ -371,6 +397,10 @@ body {
             justify-content: space-between;
             font-size: $subtitle-font;
             font-family: "Open Sans Condenced Bold";
+            
+            @media (max-width: 576px) {
+              font-size: 20pt;
+            }
 
             .title {
               color: #fff;
@@ -386,9 +416,14 @@ body {
             justify-items: center;
             justify-content: center;
             display: flex;
-            padding: 0 5rem;
+            padding: 0 3rem;
             font-family: "Open Sans Condenced Light";
             font-size: $body-font;
+
+            @media (max-width: 576px) {
+              padding: 0;
+              font-size: 13pt;
+            }
           }
 
           .btn-area {
@@ -464,6 +499,10 @@ body {
         align-items: center;
 
         transform: translateY(0);
+
+        @media (max-width: 768px) {
+          padding: 0 2rem;
+        }
 
         &.back-faded {
           background-color: rgba(0, 0, 0, 0.5);
@@ -744,7 +783,7 @@ body {
 }
 
 .pp-tableCell {
-  display: inherit;
+  display: inherit !important; 
   flex-direction: inherit;
   justify-content: inherit;
   align-content: inherit;
