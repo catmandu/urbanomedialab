@@ -49,7 +49,10 @@ $(document).ready(function () {
     animation.addEventListener('complete', function () {
         $(".leng").css({ 'opacity': '1' });        
         $.fn.pagepiling.moveTo('hero');
-        $("#eng, #esp").click(function () {
+        $("#eng, #esp").click(function (e) {
+            
+            languageApply(e.target.id);
+           
             $(".overlay").css({ 'transform': 'translateY(-100vh)' });
         })
     })
@@ -99,4 +102,17 @@ $(document).ready(function () {
             $(cont).removeClass("down");
         }, 600);
     })
+
+    function languageApply(selLan){
+
+        var elements = $('body').find('*');
+        $(elements).each(function(index, element){
+            var lngKey = $(element).data('lng');
+            if(lngKey){
+                $(element).text(
+                    languages[selLan][lngKey]
+                );
+            }
+        });
+    }
 });
