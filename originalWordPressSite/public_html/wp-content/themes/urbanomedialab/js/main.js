@@ -115,4 +115,8 @@ $(document).ready(function () {
             }
         });
     }
+
+    $("#btn-toggle-menu").click(function() {
+        $("#menu").toggleClass("menu-active");
+    })
 });

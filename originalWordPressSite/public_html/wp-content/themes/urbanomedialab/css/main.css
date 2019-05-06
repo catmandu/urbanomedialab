@@ -84,6 +84,26 @@ body {
   -ms-grid-rows: 76px 1fr;
       grid-template-rows: 76px 1fr;
       grid-template-areas: "navbar" "papeles";
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+body ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body ::-webkit-scrollbar-track {
+  background: #d6d6d6;
+}
+
+body ::-webkit-scrollbar-thumb {
+  background: #9c9c9c;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 body .navbar-top {
@@ -113,15 +133,90 @@ body .navbar-top .img-logo {
   width: 4rem;
 }
 
+body .navbar-top .menu-toggler {
+  display: none;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  body .navbar-top .menu-toggler {
+    display: block;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .navbar-top .menu-toggler {
+    display: block;
+  }
+}
+
 body .navbar-top .menu-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+@media only screen and (max-width: 576px) {
+  body .navbar-top .menu-list {
+    display: none;
+  }
+  body .navbar-top .menu-list.menu-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    position: absolute;
+    top: 76px;
+    right: 0;
+    text-align: center;
+    background-color: #000;
+    border-top: 1px solid #fff;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .navbar-top .menu-list {
+    display: none;
+  }
+  body .navbar-top .menu-list.menu-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    position: absolute;
+    top: 76px;
+    right: 0;
+    text-align: center;
+    background-color: #000;
+    border-top: 1px solid #fff;
+  }
+}
+
 body .navbar-top .menu-list li {
   float: left;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  body .navbar-top .menu-list li {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .navbar-top .menu-list li {
+    border-bottom: 1px solid #fff;
+  }
 }
 
 body .navbar-top .menu-list li .btn-menu {
@@ -433,6 +528,13 @@ body .ultimo .card-modal .content.mod-video .sec-video .video {
   height: 100%;
 }
 
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .ultimo .card-modal .content.mod-video .sec-video .video {
+    max-height: 200px;
+    max-width: 300px;
+  }
+}
+
 body .ultimo .card-modal .content .sec-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,6 +642,13 @@ body .ultimo .card-modal .content .sec-info .description {
   }
 }
 
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .ultimo .card-modal .content .sec-info .description {
+    padding: 0;
+    font-size: 13pt;
+  }
+}
+
 body .ultimo .card-modal .content .sec-info .btn-area {
   text-align: right;
 }
@@ -575,6 +684,15 @@ body .ultimo .card-modal .content .sec-video .vid-info {
           justify-content: space-between;
   font-size: 20pt;
   font-family: "Open Sans Condenced Bold";
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .ultimo .card-modal .content .sec-video .vid-info {
+    font-size: 16pt;
+  }
+  body .ultimo .card-modal .content .sec-video .vid-info .title {
+    margin: 0.5rem 0;
+  }
 }
 
 body .ultimo .card-modal .content .sec-video .vid-info .close-video {
@@ -739,6 +857,13 @@ body .reels .card-modal-reel .content.mod-video .sec-video .video {
   height: 100%;
 }
 
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .reels .card-modal-reel .content.mod-video .sec-video .video {
+    max-height: 200px;
+    max-width: 350px;
+  }
+}
+
 body .reels .card-modal-reel .content .sec-video {
   display: none;
   -webkit-transform: translateY(100%);
@@ -811,6 +936,12 @@ body .reels .sec-video .vid-info {
   font-family: "Open Sans Condenced Bold";
 }
 
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .reels .sec-video .vid-info .title {
+    margin: 0.5rem;
+  }
+}
+
 body .reels .sec-video .vid-info .close-video {
   cursor: pointer !important;
 }
@@ -830,6 +961,22 @@ body .reels .content-area {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 768px) {
+  body .reels .content-area {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .reels .content-area {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 body .reels .content-area .reel-type {
@@ -858,14 +1005,52 @@ body .reels .content-area div img {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 576px) {
+  body .reels .content-area div img {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .reels .content-area div img {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
 body .reels .content-area div label {
   font-family: "Open Sans Condenced Bold";
   font-size: 16pt;
 }
 
+@media (max-width: 576px) {
+  body .reels .content-area div label {
+    font-size: 13pt;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .reels .content-area div label {
+    font-size: 12pt;
+  }
+}
+
 body .reels .content-area div span {
   font-family: "Open Sans Condenced Light";
   font-size: 16pt;
+}
+
+@media (max-width: 576px) {
+  body .reels .content-area div span {
+    font-size: 13pt;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .reels .content-area div span {
+    font-size: 12pt;
+  }
 }
 
 body .nosotros {
@@ -936,6 +1121,19 @@ body .contactanos {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 2;
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width: 576px) {
+  body .contactanos {
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .contactanos {
+    overflow-y: scroll;
+  }
 }
 
 body .contactanos .form {
@@ -959,6 +1157,18 @@ body .contactanos .form {
 body .contactanos .form form {
   width: 45%;
   margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  body .contactanos .form form {
+    width: 100%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .contactanos .form form {
+    width: 45%;
+  }
 }
 
 body .contactanos .form .form-field {
@@ -989,7 +1199,7 @@ body .contactanos .form .form-field textarea {
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   color: #fff;
   resize: none;
   -webkit-transition: all 0.2s ease-in;
@@ -1000,11 +1210,11 @@ body .contactanos .form .form-field textarea {
 body .contactanos .form .form-field input:focus,
 body .contactanos .form .form-field textarea:focus {
   outline: none;
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 body .contactanos .form .form-field textarea {
-  height: 6rem;
+  height: 5rem;
 }
 
 body .contactanos .form button {

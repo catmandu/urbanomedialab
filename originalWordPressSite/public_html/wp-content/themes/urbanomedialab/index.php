@@ -14,6 +14,7 @@
 
 get_header();
 ?>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <div class="overlay">
 <div id="logo-animation"></div>
     <div class="leng">
@@ -23,7 +24,7 @@ get_header();
 </div>
 <div id="navbar" class="navbar-top">
     <img src="wp-content/themes/urbanomedialab/assets/img/U1_fondonegro.svg" class="img-logo">
-
+    <a class="menu-toggler" id="btn-toggle-menu"><i class="fas fa-bars"></i></a>
     <ul class="menu-list" id="menu">
         <li data-menuanchor="hero" class="active">
             <a href="#hero" class="btn-menu" data-lng="start">INCIO</a>
@@ -208,7 +209,7 @@ get_header();
             </div>
         </div>
 
-        <div class="contactanos section">
+        <div class="contactanos section pp-scrollable">
             <label class="title" id="contacta"><span>CONTACTANOS</span></label>
             <div class="form">
                 <form action="">

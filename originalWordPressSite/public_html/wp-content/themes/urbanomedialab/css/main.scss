@@ -96,6 +96,26 @@ body {
     "navbar"
     "papeles";
 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #d6d6d6;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9c9c9c;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   .navbar-top {
     grid-area: navbar;
     height: 76px;
@@ -112,14 +132,67 @@ body {
     .img-logo {
       width: 4rem;
     }
+
+    .menu-toggler {
+      display: none;
+      padding: 1rem;
+
+      @media only screen and (max-width: 576px) {
+        display: block;
+      }
+
+      @media only screen and (orientation: landscape) and (max-height: 576px) {
+        display: block;
+      }
+    }
+
     .menu-list {
       list-style: none;
       margin: 0;
       padding: 0;
 
+      @media only screen and (max-width: 576px) {
+        display: none;
+
+        &.menu-active {
+          display: flex;
+          flex-direction: column;
+          align-self: flex-start;
+          position: absolute;
+          top: 76px;
+          right: 0;
+          text-align: center;
+          background-color: #000;
+          border-top: 1px solid #fff;
+        }
+      }
+
+      @media only screen and (orientation: landscape) and (max-height: 576px) {
+        display: none;
+        &.menu-active {
+          display: flex;
+          flex-direction: column;
+          align-self: flex-start;
+          position: absolute;
+          top: 76px;
+          right: 0;
+          text-align: center;
+          background-color: #000;
+          border-top: 1px solid #fff;
+        }
+      }
+
       li {
         float: left;
         padding: 1rem;
+
+        @media only screen and (max-width: 576px) {
+            border-bottom: 1px solid #fff;
+        }
+  
+        @media only screen and (orientation: landscape) and (max-height: 576px) {
+            border-bottom: 1px solid #fff;
+          }
 
         .btn-menu {
           font-family: "Open Sans Condenced Bold";
@@ -318,7 +391,6 @@ body {
 
         @media (max-width: 576px) {
           flex-direction: column;
-
         }
 
         &.active {
@@ -352,6 +424,11 @@ body {
               max-width: 800px;
               width: 100%;
               height: 100%;
+
+              @media only screen and (orientation: landscape) and (max-height: 576px) {
+                max-height: 200px;
+                max-width: 300px;
+              }
             }
           }
         }
@@ -397,7 +474,7 @@ body {
             justify-content: space-between;
             font-size: $subtitle-font;
             font-family: "Open Sans Condenced Bold";
-            
+
             @media (max-width: 576px) {
               font-size: 20pt;
             }
@@ -421,6 +498,11 @@ body {
             font-size: $body-font;
 
             @media (max-width: 576px) {
+              padding: 0;
+              font-size: 13pt;
+            }
+
+            @media only screen and (orientation: landscape) and (max-height: 576px) {
               padding: 0;
               font-size: 13pt;
             }
@@ -450,6 +532,14 @@ body {
             justify-content: space-between;
             font-size: $subtitle-font;
             font-family: "Open Sans Condenced Bold";
+
+            @media only screen and (orientation: landscape) and (max-height: 576px) {
+              font-size: 16pt;
+
+              .title {
+                margin: 0.5rem 0;
+              }
+            }
 
             .close-video {
               cursor: pointer !important;
@@ -511,7 +601,7 @@ body {
 
       &.mod-video {
         height: 100%;
-  
+
         .sec-video {
           display: flex;
           position: absolute;
@@ -522,7 +612,7 @@ body {
           justify-content: center;
           transform: translateY(0);
           flex-direction: column;
-  
+
           .video {
             max-height: 400px;
             max-width: 800px;
@@ -567,6 +657,11 @@ body {
               max-width: 800px;
               width: 100%;
               height: 100%;
+
+              @media only screen and (orientation: landscape) and (max-height: 576px) {
+                max-height: 200px;
+                max-width: 350px;
+              }
             }
           }
         }
@@ -621,6 +716,12 @@ body {
         font-size: $subtitle-font;
         font-family: "Open Sans Condenced Bold";
 
+        @media only screen and (orientation: landscape) and (max-height: 576px) {
+          .title {
+            margin: 0.5rem;
+          }
+        }
+
         .close-video {
           cursor: pointer !important;
         }
@@ -633,6 +734,15 @@ body {
       justify-content: space-evenly;
       height: 100%;
       align-items: center;
+
+      @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media only screen and (orientation: landscape) and (max-height: 576px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
 
       .reel-type {
         cursor: pointer;
@@ -648,16 +758,42 @@ body {
           height: 4rem;
           width: 4rem;
           margin-bottom: 1rem;
+
+          @media (max-width: 576px) {
+            height: 3rem;
+            width: 3rem;
+          }
+
+          @media only screen and (orientation: landscape) and (max-height: 576px) {
+            height: 2rem;
+            width: 2rem;
+          }
         }
 
         label {
           font-family: "Open Sans Condenced Bold";
           font-size: $body-font;
+
+          @media (max-width: 576px) {
+            font-size: 13pt;
+          }
+
+          @media only screen and (orientation: landscape) and (max-height: 576px) {
+            font-size: 12pt;
+          }
         }
 
         span {
           font-family: "Open Sans Condenced Light";
           font-size: $body-font;
+
+          @media (max-width: 576px) {
+            font-size: 13pt;
+          }
+
+          @media only screen and (orientation: landscape) and (max-height: 576px) {
+            font-size: 12pt;
+          }
         }
       }
     }
@@ -714,6 +850,15 @@ body {
     display: flex !important;
     flex-direction: column;
     z-index: 2;
+    overflow-y: hidden;
+
+    @media only screen and (max-width: 576px) {
+      overflow-y: scroll;
+    }
+
+    @media only screen and (orientation: landscape) and (max-height: 576px) {
+      overflow-y: scroll;
+    }
 
     .form {
       display: flex;
@@ -726,6 +871,14 @@ body {
       form {
         width: 45%;
         margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: 576px) {
+          width: 100%;
+        }
+
+        @media only screen and (orientation: landscape) and (max-height: 576px) {
+          width: 45%;
+        }
       }
 
       .form-field {
@@ -747,7 +900,7 @@ body {
           border-top: 0;
           border-right: 0;
           border-left: 0;
-          border-bottom: 1px solid #fff;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.7);
           color: #fff;
           resize: none;
           transition: all 0.2s ease-in;
@@ -755,12 +908,12 @@ body {
 
           &:focus {
             outline: none;
-            border-bottom: 2px solid #fff;
+            border-bottom: 1px solid #fff;
           }
         }
 
         textarea {
-          height: 6rem;
+          height: 5rem;
         }
       }
 
@@ -783,7 +936,7 @@ body {
 }
 
 .pp-tableCell {
-  display: inherit !important; 
+  display: inherit !important;
   flex-direction: inherit;
   justify-content: inherit;
   align-content: inherit;
