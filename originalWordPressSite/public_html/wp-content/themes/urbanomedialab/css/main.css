@@ -44,6 +44,18 @@
   font-family: "Lato Light";
   font-size: 12pt;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background-color: #FFF;
+  color: #000;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .btn-primary {

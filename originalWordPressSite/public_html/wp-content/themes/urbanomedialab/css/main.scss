@@ -56,6 +56,17 @@ $btn-font: 12pt;
   font-family: "Lato Light";
   font-size: $btn-font;
   cursor: pointer;
+  transition: all 0.2s ease-out;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: #FFF;
+    color: #000;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn-primary {

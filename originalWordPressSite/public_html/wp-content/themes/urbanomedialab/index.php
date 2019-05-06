@@ -228,7 +228,7 @@ get_header();
                         <label>Message<span>*</span></label>
                         <textarea></textarea>
                     </div>
-                    <button class="btn">Send Email</button>
+                    <button class="btn">SEND EMAIL</button>
                 </form>
 
                 <small>DERECHOS RESERVADOS URBANO MEDIA LAB 2019</small>
