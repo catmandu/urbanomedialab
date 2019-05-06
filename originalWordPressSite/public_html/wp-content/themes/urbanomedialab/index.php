@@ -105,8 +105,7 @@ get_header();
 
                 <div class="item">
                     <div class="card escenas" data-hover-only="true" data-relative-input="true">
-                        <img src="https://s3.amazonaws.com/wp.prod.neoauto.pe/noticias/wp-content/uploads/2018/06/04131822/Escape-2018.jpg"
-                            data-depth="0.4">
+                    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" data-depth="0.4">
                     </div>
                     <label class="proyect-title">Nombre del proyecto</label>
                 </div>

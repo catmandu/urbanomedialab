@@ -137,7 +137,7 @@ body {
       display: none;
       padding: 1rem;
 
-      @media only screen and (max-width: 576px) {
+      @media only screen and (max-width: 768px) {
         display: block;
       }
 
@@ -151,7 +151,7 @@ body {
       margin: 0;
       padding: 0;
 
-      @media only screen and (max-width: 576px) {
+      @media only screen and (max-width: 768px) {
         display: none;
 
         &.menu-active {
@@ -186,7 +186,7 @@ body {
         float: left;
         padding: 1rem;
 
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 768px) {
             border-bottom: 1px solid #fff;
         }
   
