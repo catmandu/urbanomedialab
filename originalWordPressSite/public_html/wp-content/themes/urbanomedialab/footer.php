@@ -1,17 +1,8 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WpParallax
- */
-
+<?php 
+wp_footer(); 
 ?>
-
-<?php wp_footer(); ?>
-
+            <small>DERECHOS RESERVADOS URBANO MEDIA LAB <?=date('Y');?></small>
+        </div><!--contactanos-->
+    </div><!--papeleo-->
 </body>
 </html>
