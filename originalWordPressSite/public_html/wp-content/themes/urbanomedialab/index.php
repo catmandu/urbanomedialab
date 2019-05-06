@@ -14,7 +14,6 @@
 
 get_header();
 ?>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <div class="overlay">
 <div id="logo-animation"></div>
     <div class="leng">
@@ -44,17 +43,17 @@ get_header();
 
     <div id="her" class="hero section">
 
-        <p class="leme">
+        <p class="leme" data-lng="leme">
             CORRECCIÓN DE COLOR & POST PRODUCCIÓN
         </p>
         <div class="btns">
-            <button id="to-ultimo" class="btn" data-menuanchor="ultimo">LO ULTIMO</button>
-            <button id="to-reels" class="btn">REELS</button>
+            <button id="to-ultimo" class="btn" data-menuanchor="ultimo" data-lng="latest">LO ULTIMO</button>
+            <button id="to-reels" class="btn" data-lng="reels">REELS</button>
         </div>
     </div>
 
         <div class="ultimo section pp-scrollable">
-            <label class="title" id="lo-ultimo"><span>LO ÚLTIMO</span></label>
+            <label class="title" id="lo-ultimo" data-lng="latest"><span>LO ÚLTIMO</span></label>
             <div class="work-grid">
 
                 <div class="item">
@@ -162,36 +161,36 @@ get_header();
         </div>
 
         <div class="reels section">
-            <label class="title" id="reel"><span>REELS</span></label>
+            <label class="title" id="reel"><span data-lng="reels">REELS</span></label>
             <div class="content-area">
                 <div class="reel-type">
                     <img src="wp-content/themes/urbanomedialab/assets/icons/ediciñon on-off.svg">
-                    <label>EDICIÓN </label>
-                    <span>ONLINE Y OFFLINE</span>
+                    <label data-lng="editing1">EDICIÓN </label>
+                    <span data-lng="editing2">ONLINE Y OFFLINE</span>
                 </div>
 
                 <div class="reel-type">
                     <img src="wp-content/themes/urbanomedialab/assets/icons/Color_correction.svg">
-                    <label>CORRECCIÓN</label>
-                    <span>DE COLOR</span>
+                    <label data-lng="colorCorrection1">CORRECCIÓN</label>
+                    <span data-lng="colorCorrection2">DE COLOR</span>
                 </div>
 
                 <div class="reel-type">
                     <img src="wp-content/themes/urbanomedialab/assets/icons/motion graphics.svg">
-                    <label>MOTION </label>
-                    <span>GRAPHICS</span>
+                    <label data-lng="motionGraphics1">MOTION </label>
+                    <span data-lng="motionGraphics2">GRAPHICS</span>
                 </div>
 
                 <div class="reel-type">
                     <img src="wp-content/themes/urbanomedialab/assets/icons/3d.svg">
-                    <label>ANIMACIÓN </label>
-                    <span>3D</span>
+                    <label data-lng="3DAnimation1">ANIMACIÓN </label>
+                    <span data-lng="3DAnimation2">3D</span>
                 </div>
 
                 <div class="reel-type">
                     <img src="wp-content/themes/urbanomedialab/assets/icons/VFX.svg">
-                    <label>VFX</label>
-                    <span>&ensp;</span>
+                    <label data-lng="vfx1">VFX</label>
+                    <span data-lng="vfx2">&ensp;</span>
                 </div>
 
 
@@ -209,33 +208,26 @@ get_header();
         </div>
 
         <div class="contactanos section pp-scrollable">
-            <label class="title" id="contacta"><span>CONTACTANOS</span></label>
+            <label class="title" id="contacta"><span data-lng="contact">CONTACTANOS</span></label>
             <div class="form">
                 <form action="">
                     <div class="form-field">
-                        <label>Name<span>*</span></label>
+                        <label data-lng="name">Name<span>*</span></label>
                         <input type="text">
                     </div>
                     <div class="form-field">
-                        <label>e-mail<span>*</span></label>
+                        <label data-lng="email">e-mail<span>*</span></label>
                         <input type="email">
                     </div>
                     <div class="form-field">
-                        <label>Phone</label>
+                        <label data-lng="phone">Phone</label>
                         <input type="tel">
                     </div>
                     <div class="form-field">
-                        <label>Message<span>*</span></label>
+                        <label data-lng="message">Message<span>*</span></label>
                         <textarea></textarea>
                     </div>
-                    <button class="btn">SEND EMAIL</button>
+                    <button class="btn" data-lng="sendEmail">SEND EMAIL</button>
                 </form>
-
-                <small>DERECHOS RESERVADOS URBANO MEDIA LAB 2019</small>
-            </div>
-
-
-        </div>
-    </div>
 
 <?php get_footer(); ?>

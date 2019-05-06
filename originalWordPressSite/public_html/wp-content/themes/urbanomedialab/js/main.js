@@ -51,7 +51,7 @@ $(document).ready(function () {
         $.fn.pagepiling.moveTo('hero');
         $("#eng, #esp").click(function (e) {
             
-            languageApply(e.target.id);
+            applyLanguage(e.target.id);
            
             $(".overlay").css({ 'transform': 'translateY(-100vh)' });
         })
@@ -103,15 +103,24 @@ $(document).ready(function () {
         }, 600);
     })
 
-    function languageApply(selLan){
+    function applyLanguage(selectedLanguage){
 
         var elements = $('body').find('*');
         $(elements).each(function(index, element){
-            var lngKey = $(element).data('lng');
-            if(lngKey){
-                $(element).text(
-                    languages[selLan][lngKey]
-                );
+            var translationKey = $(element).data('lng');
+            if(translationKey){
+
+                var mandatorySpan = '<span>*</span>';
+
+                if($(element).html().indexOf(mandatorySpan) >= 0){
+                    $(element).text(
+                        languages[selectedLanguage][translationKey]
+                    ).append(mandatorySpan);
+                }else{
+                    $(element).text(
+                        languages[selectedLanguage][translationKey]
+                    );
+                }
             }
         });
     }
