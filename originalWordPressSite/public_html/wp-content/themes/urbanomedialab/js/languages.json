@@ -1,9 +1,9 @@
-const languages = {
+{
     "esp":{
-        "start":"INICIO, Ostia",
-        "latest":"LO ÚLTIMO, Jolines",
-        "reels":"REELS, concha tu mare",
-        "contact":"CONTÁCTANOS, cojones",
+        "home":"INICIO",
+        "latest":"LO ÚLTIMO",
+        "reels":"REELS",
+        "contact":"CONTÁCTANOS",
         "editing1":"EDICIÓN",
         "editing2":"ONLYNE Y OFFLINE",
         "colorCorrection1":"CORRECCIÓN",
@@ -22,7 +22,7 @@ const languages = {
         
     },
     "eng":{
-        "start":"START",
+        "home":"HOME",
         "latest":"LATEST",
         "reels":"REELS",
         "contact":"CONTACT US",
@@ -42,4 +42,4 @@ const languages = {
         "message":"Message",
         "sendEmail":"SEND EMAIL"
     }
-};
+}

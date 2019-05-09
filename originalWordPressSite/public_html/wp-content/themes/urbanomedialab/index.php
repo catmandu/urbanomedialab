@@ -26,7 +26,7 @@ get_header();
     <a class="menu-toggler" id="btn-toggle-menu"><i class="fas fa-bars"></i></a>
     <ul class="menu-list" id="menu">
         <li data-menuanchor="hero" class="active">
-            <a href="#hero" class="btn-menu" data-lng="start">INCIO</a>
+            <a href="#hero" class="btn-menu" data-lng="home">INCIO</a>
         </li>
         <li data-menuanchor="ultimo">
             <a href="#ultimo" class="btn-menu" data-lng="latest">LO ÚLTIMO</a>
