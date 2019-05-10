@@ -33,7 +33,7 @@ if(isset($_POST['username'])){
 <html>
 <head>
 </head>
-<body>
+<body onload="redirect()">
     <form method="post" action="login.php">
         <label>Username</label><input name="username"/><br/>
         <label>Password</label><input name="password" type="password"/><br/>
@@ -42,8 +42,12 @@ if(isset($_POST['username'])){
 </body>
 <script>
     function redirect(){
-        var uri = window.location.protocol + '//' +  window.location.host;
-        //window.location = uri +'/urbanomedialab/originalWordpressSite/Public_html/wp-content/themes/urbanomedialab/admin.php';
+        var uri = window.location.protocol + '//' +  window.location.host + window.location.pathname.replace('login.php','');
+        console.log('protocol:'+ window.location.protocol);
+        console.log('host:' +window.location.host);
+        console.log('path to file name:'+ window.location.pathname.replace('login.php',''));
+        //alert(uri);
+        window.location = uri +'wp-content/themes/urbanomedialab/admin.php';
     }
 </script>
 </html>
