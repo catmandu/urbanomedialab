@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(250px, 300px) auto;
+  grid-template-areas: "menu content";
+  overflow: hidden;
+
+  .sidenav {
+    grid-area: menu;
+  }
+
+  .content {
+    grid-area: content;
+    overflow: auto;
+  }
+}
