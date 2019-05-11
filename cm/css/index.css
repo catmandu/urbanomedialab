@@ -15,10 +15,41 @@ body .sidenav {
   grid-area: menu;
 }
 
+body .sidenav .menu-item {
+  cursor: pointer;
+}
+
+body .sidenav .menu-item.active {
+  background-color: #283442;
+  color: #fff;
+  border-color: transparent;
+}
+
 body .content {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: content;
   overflow: auto;
+}
+
+body .content .area {
+  display: none;
+}
+
+body .content .area.active {
+  display: block;
+}
+
+body .content .ultimo .proyects-area {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  grid-gap: 0.5rem;
+}
+
+body .content .ultimo .proyects-area .actions {
+  text-align: right;
 }
 /*# sourceMappingURL=index.css.map */

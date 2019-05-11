@@ -17,41 +17,27 @@
 
     <div class="sidenav">
         <ul class="list-group list-group-flush">
-            <!-- <li class="list-group-item">
-                <select class="custom-select">
-                    <option selected>Idiomas</option>
-                    <option value="1">Español</option>
-                    <option value="2">Inglés</option>
-                    <option value="3">Otro</option>
-                </select>
-            </li> -->
-            <li class="list-group-item"><a href="#splash">SPLASH</a></li>
-            <li class="list-group-item"><a href="#navegacion">NAVEGACIÓN</a></li>
-            <li class="list-group-item"><a href="#inicio">INICIO</a></li>
-            <li class="list-group-item"><a href="#ultimo">ÚLTIMO</a></li>
-            <li class="list-group-item"><a href="#reels">REELS</a></li>
-            <li class="list-group-item"><a href="#contacto">CONTÁCTANOS</a></li>
+            <li class="menu-item list-group-item active" data-target="navegation-sec">NAVEGACIÓN</li>
+            <li class="menu-item list-group-item" data-target="home-sec">INICIO</li>
+            <li class="menu-item list-group-item" data-target="latest-sec">ÚLTIMO</li>
+            <li class="menu-item list-group-item" data-target="reels-sec">REELS</li>
+            <li class="menu-item list-group-item" data-target="contact-sec">CONTÁCTANOS</li>
         </ul>
     </div>
 
     <div class="content p-3">
-        <div class="splash-content">
+        <div class="language-content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="form-group col-md-12">
-                        <h2 id="splash">SPLASH</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-4">
-                        <label for="language">Language name</label>
+                    <div class="form-group col-md-6">
+                        <label for="language">Language</label>
                         <select class="custom-select" id="language">
                             <option value="1">Español</option>
                             <option value="2">Inglés</option>
                             <option value="3">Otro</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                         <label for="languagename">Language name</label>
                         <input type="text" class="form-control" id="languagename">
                     </div>
@@ -59,7 +45,7 @@
             </div>
         </div>
 
-        <div class="navegation-content">
+        <div class="area navegation-content active" id="navegation-sec">
             <div class="container-fluid">
                 <div class="row">
                     <div class="form-group col-md-12">
@@ -87,7 +73,7 @@
             </div>
         </div>
 
-        <div class="inicio">
+        <div class="area inicio" id="home-sec">
             <div class="container-fluid">
                 <div class="row">
                     <div class="form-group col-md-12">
@@ -112,17 +98,93 @@
             </div>
         </div>
 
-        <div class="ultimo">
+        <div class="area ultimo" id="latest-sec">
             <div class="container-fluid">
                 <div class="row">
                     <div class="form-group col-md-12">
                         <h2 id="ultimo">ULTIMO</h2>
                     </div>
                 </div>
+                <div class="row">
+
+                    <div class="form-group col-md-6">
+                        <label for="title">Tittle</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="txt-desc">Desciption</label>
+                        <textarea class="form-control" id="txt-desc" rows="3"></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="customFile">Picture</label>
+                        <div class="input-group">
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="proy-pic" name="filename">
+                                <label class="custom-file-label" for="proy-pic">Seleccionar archivo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="customFile">Video</label>
+                        <div class="input-group">
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="proy-vid" name="filename">
+                                <label class="custom-file-label" for="proy-vid">Seleccionar archivo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>Proyects</h4>
+                </div>
+                <div class="row proyects-area col-m-12">
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="reels">
+        <div class="area reels" id="reels-sec">
             <div class="container-fluid">
                 <div class="row">
                     <div class="form-group col-md-12">
@@ -223,7 +285,7 @@
             </div>
         </div>
 
-        <div class="contanto">
+        <div class="area contacto" id="contact-sec">
             <div class="container-fluid">
                 <div class="row">
                     <div class="form-group col-md-12">
