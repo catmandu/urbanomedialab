@@ -133,8 +133,6 @@ function urbanomedialab_scripts() {
 
 	wp_enqueue_script( 'urbanomedialab-script-lottie', get_template_directory_uri() . '/js/lottie.min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'urbanomedialab-script-languages', get_template_directory_uri() . '/js/languages.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'urbanomedialab-script-main', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

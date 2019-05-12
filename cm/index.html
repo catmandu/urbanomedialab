@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CM PAGE</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Hello, world!</title>
+</head>
+
+<body class="body">
+
+    <div class="sidenav">
+        <ul class="list-group list-group-flush">
+            <li class="menu-item list-group-item active" data-target="navegation-sec">NAVEGACIÓN</li>
+            <li class="menu-item list-group-item" data-target="home-sec">INICIO</li>
+            <li class="menu-item list-group-item" data-target="latest-sec">ÚLTIMO</li>
+            <li class="menu-item list-group-item" data-target="reels-sec">REELS</li>
+            <li class="menu-item list-group-item" data-target="contact-sec">CONTÁCTANOS</li>
+        </ul>
+    </div>
+
+    <div class="content p-3">
+        <div class="language-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="language">Language</label>
+                        <select class="custom-select" id="language">
+                            <option value="1">Español</option>
+                            <option value="2">Inglés</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="languagename">Language name</label>
+                        <input type="text" class="form-control" id="languagename">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="area navegation-content active" id="navegation-sec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h2 id="navegacion">NAVEGACIÓN</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="home">HOME</label>
+                        <input type="text" class="form-control" id="home">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="latest">LATEST</label>
+                        <input type="text" class="form-control" id="latest">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="reels">REELS</label>
+                        <input type="text" class="form-control" id="reels">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="contact">CONTACT</label>
+                        <input type="text" class="form-control" id="contact">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="area inicio" id="home-sec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h2 id="inicio">INICIO</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="customFile">GIF</label>
+                        <div class="input-group">
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                <label class="custom-file-label" for="customFile">Seleccionar archivo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="area ultimo" id="latest-sec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h2 id="ultimo">ULTIMO</h2>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-group col-md-7 d-flex flex-column">
+                        <label for="title">Tittle</label>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" id="title">
+                            <button class="btn btn-primary ml-3">SAVE</button>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="txt-desc">Desciption</label>
+                        <textarea class="form-control" id="txt-desc" rows="3"></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="customFile">Picture</label>
+                        <div class="input-group">
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="proy-pic" name="filename">
+                                <label class="custom-file-label" for="proy-pic">Seleccionar archivo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="customFile">Video</label>
+                        <div class="input-group">
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="proy-vid" name="filename">
+                                <label class="custom-file-label" for="proy-vid">Seleccionar archivo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>Proyects</h4>
+                </div>
+                <div class="row proyects-area col-m-12">
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <div class="proyect">
+                        <label class="title">Proyecto 1</label>
+                        <div class="actions">
+                            <button class="btn btn-primary">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="area reels" id="reels-sec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h2 id="reels">REELS</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h4>EDICIÓN ONLINE</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="editionon1">EDICIÓN 1</label>
+                        <input type="text" class="form-control" id="editionon1">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="editionon2">EDICIÓN 2</label>
+                        <input type="text" class="form-control" id="editionon2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h4>EDICIÓN OFLINE</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="editionof1">EDICIÓN 1</label>
+                        <input type="text" class="form-control" id="editionof1">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="editionof2">EDICIÓN 2</label>
+                        <input type="text" class="form-control" id="editionof2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h4>CORRECCIÓN DE COLOR</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="colcor1">TITULO 1</label>
+                        <input type="text" class="form-control" id="colcor1">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="colcor2">TITULO 2</label>
+                        <input type="text" class="form-control" id="colcor2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h4>MOTION GRAPHICS</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="motgrap1">TITULO 1</label>
+                        <input type="text" class="form-control" id="motgrap1">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="motgrap2">TITULO 2</label>
+                        <input type="text" class="form-control" id="motgrap2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h4>3D ANIMATION</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="3danima1">TITULO 1</label>
+                        <input type="text" class="form-control" id="3danima1">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="3danima2">TITULO 2</label>
+                        <input type="text" class="form-control" id="3danima2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h4>VFX</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="vfx1">TITULO 1</label>
+                        <input type="text" class="form-control" id="vfx1">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="vfx2">TITULO 2</label>
+                        <input type="text" class="form-control" id="vfx2">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="area contacto" id="contact-sec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h2 id="contacto">CONTACTANOS</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="message">Mensaje</label>
+                        <input type="text" class="form-control" id="message">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="send">Send rmail</label>
+                        <input type="text" class="form-control" id="send">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="guardar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <button class="btn btn-primary">GUARDAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+
+<!-- login pendiente con usuario y contraseña nada mas -->

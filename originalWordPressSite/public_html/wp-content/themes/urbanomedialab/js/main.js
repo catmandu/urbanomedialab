@@ -104,24 +104,21 @@ $(document).ready(function () {
     })
 
     function applyLanguage(selectedLanguage){
+        $.getJSON('wp-content/themes/urbanomedialab/js/languages.json')
+        .done(function(languages){
+            var elements = $('body').find('*');
+            var mandatorySpan = '<span>*</span>';
 
-        var elements = $('body').find('*');
-        $(elements).each(function(index, element){
-            var translationKey = $(element).data('lng');
-            if(translationKey){
-
-                var mandatorySpan = '<span>*</span>';
-
-                if($(element).html().indexOf(mandatorySpan) >= 0){
+            $(elements).each(function(index, element){
+                var translationKey = $(element).data('lng');
+                if(translationKey){
+    
+                    var hasSpan = $(element).html().indexOf(mandatorySpan) >= 0;
                     $(element).text(
                         languages[selectedLanguage][translationKey]
-                    ).append(mandatorySpan);
-                }else{
-                    $(element).text(
-                        languages[selectedLanguage][translationKey]
-                    );
+                    ).append(hasSpan ? mandatorySpan : '');
                 }
-            }
+            });
         });
     }
 

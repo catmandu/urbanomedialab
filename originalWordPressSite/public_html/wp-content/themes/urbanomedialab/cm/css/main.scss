@@ -1,0 +1,53 @@
+$background: #000;
+$font-color: #fff;
+$primary: #283442;
+$sec: #9c9c9c;
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(250px, 300px) auto;
+  grid-template-areas: "menu content";
+  overflow: hidden;
+
+  .sidenav {
+    grid-area: menu;
+
+    .menu-item {
+      cursor: pointer;
+
+      &.active {
+        background-color: $primary;
+        color: #fff;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .content {
+    grid-area: content;
+    overflow: auto;
+
+    .area {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .ultimo {
+      .proyects-area {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        grid-gap: 0.5rem;
+
+        .actions {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

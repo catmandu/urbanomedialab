@@ -26,7 +26,7 @@ get_header();
     <a class="menu-toggler" id="btn-toggle-menu"><i class="fas fa-bars"></i></a>
     <ul class="menu-list" id="menu">
         <li data-menuanchor="hero" class="active">
-            <a href="#hero" class="btn-menu" data-lng="start">INCIO</a>
+            <a href="#hero" class="btn-menu" data-lng="home">INCIO</a>
         </li>
         <li data-menuanchor="ultimo">
             <a href="#ultimo" class="btn-menu" data-lng="latest">LO ÚLTIMO</a>
@@ -165,8 +165,14 @@ get_header();
             <div class="content-area">
                 <div class="reel-type">
                     <img src="wp-content/themes/urbanomedialab/assets/icons/ediciñon on-off.svg">
-                    <label data-lng="editing1">EDICIÓN </label>
-                    <span data-lng="editing2">ONLINE Y OFFLINE</span>
+                    <label data-lng="onlineEditing1">EDICIÓN </label>
+                    <span data-lng="onlineEditing2">ONLINE</span>
+                </div>
+                
+                <div class="reel-type">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/ediciñon on-off.svg">
+                    <label data-lng="offlineEditing1">EDICIÓN</label>
+                    <span data-lng="offlineEditing2">OFFLINE</span>
                 </div>
 
                 <div class="reel-type">
