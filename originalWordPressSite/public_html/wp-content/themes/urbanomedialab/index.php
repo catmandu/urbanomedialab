@@ -165,8 +165,14 @@ get_header();
             <div class="content-area">
                 <div class="reel-type">
                     <img src="wp-content/themes/urbanomedialab/assets/icons/ediciñon on-off.svg">
-                    <label data-lng="editing1">EDICIÓN </label>
-                    <span data-lng="editing2">ONLINE Y OFFLINE</span>
+                    <label data-lng="onlineEditing1">EDICIÓN </label>
+                    <span data-lng="onlineEditing2">ONLINE</span>
+                </div>
+                
+                <div class="reel-type">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/ediciñon on-off.svg">
+                    <label data-lng="offlineEditing1">EDICIÓN</label>
+                    <span data-lng="offlineEditing2">OFFLINE</span>
                 </div>
 
                 <div class="reel-type">
