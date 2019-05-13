@@ -95,7 +95,8 @@ body {
       grid-template-columns: auto;
   -ms-grid-rows: 76px 1fr;
       grid-template-rows: 76px 1fr;
-      grid-template-areas: "navbar" "papeles";
+      grid-template-areas: "navbar"
+ "papeles";
   /* width */
   /*  */
   /* Track */
@@ -174,6 +175,10 @@ body .navbar-top .img-logo {
   height: 100%;
   padding-left: 1rem;
   max-height: 35px;
+}
+
+body .navbar-top .img-logo:hover {
+  cursor: pointer;
 }
 
 body .navbar-top .menu-toggler {
