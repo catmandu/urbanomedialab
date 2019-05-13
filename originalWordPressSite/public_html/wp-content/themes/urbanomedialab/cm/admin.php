@@ -71,7 +71,7 @@ if(isset($_POST['language'])){
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-    <script><?php echo 'var languages='.json_encode($languages).';';?></script>
+    <script>var languages=<?=json_encode($languages);?>;</script>
 </body>
 
 </html>
