@@ -24,16 +24,20 @@ $(document).ready(function () {
     $(".work-grid .item").click(function () {
         $("#work-info").addClass("active back-faded");
         setTimeout(() => {
-            $(".card-modal .content").addClass("active");
+            $(".card-modal .content").removeClass("hidden");
         }, 100);
         $(".pp-scrollable").css({ 'overflow-y': 'hidden' });
     });
 
     $(".close-modal").click(function () {
-        $(".card-modal .content").removeClass("active");
-        $("#work-info").removeClass("back-faded");
+        $(".card-modal .content").addClass("leaving");
+        $(".pp-scrollable").css({ 'overflow-x': 'hidden' });
         setTimeout(() => {
+            $("#work-info").removeClass("back-faded");
             $("#work-info").removeClass("active");
+            $(".card-modal .content").removeClass("leaving");
+            $(".card-modal .content").addClass("hidden");
+            $(".pp-scrollable").css({ 'overflow-x': 'auto' });
         }, 600);
         $(".pp-scrollable").css({ 'overflow-y': 'scroll' });
     })
@@ -81,12 +85,35 @@ $(document).ready(function () {
 
     })
 
-    $(".reel-type").click(function() {
+    $(".reel-video").click(function() {
         $("#reel-info").addClass("active back-faded");
         setTimeout(() => {
             $(".card-modal-reel .content").addClass("active");
         }, 100);
     })
+
+    $("#edition-off").click(function() {
+        var reel = $("#reel-persona");
+        $(reel).addClass("active back-faded");
+        setTimeout(() => {
+            $(reel).find(".content").first().addClass("active");
+        }, 100);
+    })
+
+    $(".exit-persona").click(function() {
+        var reel = $("#reel-persona");
+        
+        $(reel).find(".content").first().removeClass("active");
+        $(reel).removeClass("back-faded");
+        setTimeout(() => {
+            $(reel).removeClass("active");
+        }, 600);
+
+        $(reel).find(".sec-persona").first().addClass("down");
+        setTimeout(() => {
+            $(reel).find(".sec-persona").first().removeClass("down");
+        }, 600);
+    });
 
     $(".close-video-reel").click(function() {
         $(".card-modal-reel .content").removeClass("active");
@@ -99,6 +126,21 @@ $(document).ready(function () {
         var cont = $(this).closest(".sec-video");
         $(cont).addClass("down");
         setTimeout(() => {
+            $(cont).removeClass("down");
+        }, 600);
+    })
+
+    $(".btn-carousel").click(function() {
+        var pa = $(this).closest(".content");
+        $(pa).addClass("mod-video");
+    })
+
+    $(".exit-carrousel").click(function(){
+        var pa = $(this).closest(".content");
+        var cont = $(this).closest(".sec-video");
+        $(cont).addClass("down");
+        setTimeout(() => {
+            $(pa).removeClass("mod-video");
             $(cont).removeClass("down");
         }, 600);
     })
@@ -125,4 +167,10 @@ $(document).ready(function () {
     $("#btn-toggle-menu").click(function() {
         $("#menu").toggleClass("menu-active");
     })
+
+    $('.carrousel-personas').slick();
+
+    $('.carrousel-personas').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        
+    });
 });

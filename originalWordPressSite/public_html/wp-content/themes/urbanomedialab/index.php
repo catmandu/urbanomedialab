@@ -22,7 +22,7 @@ get_header();
     </div>
 </div>
 <div id="navbar" class="navbar-top">
-    <img src="wp-content/themes/urbanomedialab/assets/img/U1_fondonegro.svg" class="img-logo">
+    <img src="wp-content/themes/urbanomedialab/assets/icons/urbano-h.svg" class="img-logo">
     <a class="menu-toggler" id="btn-toggle-menu"><i class="fas fa-bars"></i></a>
     <ul class="menu-list" id="menu">
         <li data-menuanchor="hero" class="active">
@@ -42,13 +42,8 @@ get_header();
 <div id="papeleo" class="papeles">
 
     <div id="her" class="hero section">
-
-        <p class="leme" data-lng="leme">
-            CORRECCIÓN DE COLOR & POST PRODUCCIÓN
-        </p>
         <div class="btns">
-            <button id="to-ultimo" class="btn" data-menuanchor="ultimo" data-lng="latest">LO ULTIMO</button>
-            <button id="to-reels" class="btn" data-lng="reels">REELS</button>
+            <i class="fas fa-angle-double-down down-arrows"></i>
         </div>
     </div>
 
@@ -136,7 +131,7 @@ get_header();
             </div>
 
             <div class="card-modal back-faded" id="work-info">
-                <div class="content">
+                <div class="content hidden">
                     <div class="sec-img"></div>
                     <div class="sec-info">
                         <div class="sec-title"><label class="title">SMIRNOFF</label><span class="close-modal">x</span>
@@ -163,40 +158,40 @@ get_header();
         <div class="reels section">
             <label class="title" id="reel"><span data-lng="reels">REELS</span></label>
             <div class="content-area">
-                <div class="reel-type">
-                    <img src="wp-content/themes/urbanomedialab/assets/icons/ediciñon on-off.svg">
+                <div class="reel-type reel-video">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/ONLINE1.svg">
                     <label data-lng="onlineEditing1">EDICIÓN </label>
                     <span data-lng="onlineEditing2">ONLINE</span>
                 </div>
                 
-                <div class="reel-type">
-                    <img src="wp-content/themes/urbanomedialab/assets/icons/ediciñon on-off.svg">
+                <div class="reel-type" id="edition-off">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/OFFLINE.svg">
                     <label data-lng="offlineEditing1">EDICIÓN</label>
                     <span data-lng="offlineEditing2">OFFLINE</span>
                 </div>
 
-                <div class="reel-type">
-                    <img src="wp-content/themes/urbanomedialab/assets/icons/Color_correction.svg">
+                <div class="reel-type reel-video">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/CORRECCION1.svg">
                     <label data-lng="colorCorrection1">CORRECCIÓN</label>
                     <span data-lng="colorCorrection2">DE COLOR</span>
                 </div>
 
-                <div class="reel-type">
-                    <img src="wp-content/themes/urbanomedialab/assets/icons/motion graphics.svg">
+                <div class="reel-type reel-video">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/MOGRAPH1.svg">
                     <label data-lng="motionGraphics1">MOTION </label>
                     <span data-lng="motionGraphics2">GRAPHICS</span>
                 </div>
 
-                <div class="reel-type">
-                    <img src="wp-content/themes/urbanomedialab/assets/icons/3d.svg">
+                <div class="reel-type reel-video">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/3D1.svg">
                     <label data-lng="3DAnimation1">ANIMACIÓN </label>
                     <span data-lng="3DAnimation2">3D</span>
                 </div>
 
-                <div class="reel-type">
-                    <img src="wp-content/themes/urbanomedialab/assets/icons/VFX.svg">
+                <div class="reel-type reel-video">
+                    <img src="wp-content/themes/urbanomedialab/assets/icons/VFX1.svg">
                     <label data-lng="vfx1">VFX</label>
-                    <span data-lng="vfx2">&ensp;</span>
+                    <span data-lng="vfx2">&nbsp; &ensp;</span>
                 </div>
 
 
@@ -208,6 +203,31 @@ get_header();
                         </div>
                         <iframe class="video"></iframe>
                         <!-- hacer que al hacer click y ver el video se cambie el tamaño al 100% del contenedor  -->
+                    </div>
+                </div>
+            </div>
+            <div class="card-modal-reel back-faded" id="reel-persona">
+                <div class="content">
+                    <div class="sec-video sec-carrousel">
+                        <span class="close-carrousel"><span class="exit-carrousel">x</span></span>
+                        <div class="carrousel-personas">
+                            <div><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/lqj-QNYsZFk?controls=1""></iframe></div></div>
+                            <div><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/lqj-QNYsZFk?controls=1"></iframe></div></div>
+                            <div><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/lqj-QNYsZFk?controls=1"></iframe></div></div>
+                        </div>
+                    </div>
+                    <div class="sec-persona">
+                        <span class="close-video-reel-persona"><span class="exit-persona">x</span></span>
+                        <div class="sec-personas">
+                            <div class="persona">
+                                <label class="p-name">Nombre de la Persona</label>
+                                <button class="btn btn-carousel">ACCIÓN</button>
+                            </div>
+                            <div class="persona">
+                                <label class="p-name">Nombre de la Persona</label>
+                                <button class="btn btn-carousel">ACCIÓN</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -50,7 +50,7 @@
 }
 
 .btn:hover {
-  background-color: #FFF;
+  background-color: #fff;
   color: #000;
 }
 
@@ -97,9 +97,15 @@ body {
       grid-template-rows: 76px 1fr;
       grid-template-areas: "navbar" "papeles";
   /* width */
+  /*  */
   /* Track */
+  /*  */
   /* Handle */
+  /*  */
   /* Handle on hover */
+  /*  */
+  /* keyframes */
+  /*  */
 }
 
 body ::-webkit-scrollbar {
@@ -116,6 +122,28 @@ body ::-webkit-scrollbar-thumb {
 
 body ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@-webkit-keyframes updown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes updown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
 }
 
 body .navbar-top {
@@ -142,7 +170,10 @@ body .navbar-top {
 }
 
 body .navbar-top .img-logo {
-  width: 4rem;
+  width: auto;
+  height: 100%;
+  padding-left: 1rem;
+  max-height: 35px;
 }
 
 body .navbar-top .menu-toggler {
@@ -251,6 +282,21 @@ body .papeles {
   height: 100%;
 }
 
+body .papeles .section {
+  -webkit-transform: translate3d(0px, 100%, 0px) !important;
+          transform: translate3d(0px, 100%, 0px) !important;
+}
+
+body .papeles .section.active {
+  -webkit-transform: translate3d(0px, 0px, 0px) !important;
+          transform: translate3d(0px, 0px, 0px) !important;
+}
+
+body .papeles .section.prev {
+  -webkit-transform: translate3d(0px, 0px, 0px) !important;
+          transform: translate3d(0px, 0px, 0px) !important;
+}
+
 body .overlay {
   background-color: #000;
   height: 100vh;
@@ -337,6 +383,15 @@ body .hero .leme {
 
 body .hero .btns {
   z-index: 2;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+
+body .hero .btns .down-arrows {
+  cursor: pointer;
+  -webkit-animation: updown 1s infinite alternate;
+          animation: updown 1s infinite alternate;
 }
 
 body .ultimo {
@@ -480,10 +535,11 @@ body .ultimo .card-modal .content {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: rgba(0, 0, 0, 0.9);
-  -webkit-transform: scale(0, 0);
-          transform: scale(0, 0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  width: 100%;
 }
 
 @media (max-width: 576px) {
@@ -495,9 +551,14 @@ body .ultimo .card-modal .content {
   }
 }
 
-body .ultimo .card-modal .content.active {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+body .ultimo .card-modal .content.hidden {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+body .ultimo .card-modal .content.leaving {
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
 }
 
 body .ultimo .card-modal .content.mod-video {
@@ -531,6 +592,9 @@ body .ultimo .card-modal .content.mod-video .sec-video {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 2rem;
 }
 
 body .ultimo .card-modal .content.mod-video .sec-video .video {
@@ -826,6 +890,8 @@ body .reels .card-modal-reel .content {
           transform: scale(1, 1);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 body .reels .card-modal-reel .content.mod-video {
@@ -837,7 +903,7 @@ body .reels .card-modal-reel .content.mod-video .sec-img {
   opacity: 0;
 }
 
-body .reels .card-modal-reel .content.mod-video .sec-info {
+body .reels .card-modal-reel .content.mod-video .sec-persona {
   opacity: 0;
 }
 
@@ -860,6 +926,19 @@ body .reels .card-modal-reel .content.mod-video .sec-video {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 2rem;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.up {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.down {
+  -webkit-transform: translateY(100%) !important;
+          transform: translateY(100%) !important;
 }
 
 body .reels .card-modal-reel .content.mod-video .sec-video .video {
@@ -874,6 +953,84 @@ body .reels .card-modal-reel .content.mod-video .sec-video .video {
     max-height: 200px;
     max-width: 350px;
   }
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 2rem;
+  z-index: 3;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .carrousel-personas {
+  max-height: 400px;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .carrousel-personas {
+    max-height: 200px;
+    max-width: 350px;
+  }
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .carrousel-personas .slick-list {
+  height: 100%;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .carrousel-personas .slick-track {
+  height: 100%;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .carrousel-personas .slick-track .slick-slide {
+  height: 100%;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .carrousel-personas .video-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .carrousel-personas .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .close-carrousel {
+  width: 100%;
+  text-align: right;
+  font-size: 20pt;
+  font-family: "Open Sans Condenced Bold";
+  margin-bottom: 3rem;
+}
+
+body .reels .card-modal-reel .content.mod-video .sec-video.sec-carrousel .close-carrousel .exit-carrousel {
+  cursor: pointer;
 }
 
 body .reels .card-modal-reel .content .sec-video {
@@ -894,23 +1051,98 @@ body .reels .card-modal-reel .content .sec-video.down {
           transform: translateY(100%);
 }
 
-body .reels .card-modal-reel .content .sec-video .vid-info {
-  width: 100%;
+body .reels .card-modal-reel .content .sec-video .sec-carrousel {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+body .reels .card-modal-reel .content .sec-persona {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 20pt;
-  font-family: "Open Sans Condenced Bold";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 2rem;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-body .reels .card-modal-reel .content .sec-video .vid-info .close-video-reel {
-  cursor: pointer !important;
+body .reels .card-modal-reel .content .sec-persona.up {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .reels .card-modal-reel .content .sec-persona.down {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+body .reels .card-modal-reel .content .sec-persona .close-video-reel-persona {
+  width: 100%;
+  text-align: right;
+  font-size: 20pt;
+  font-family: "Open Sans Condenced Bold";
+  margin-bottom: 3rem;
+}
+
+body .reels .card-modal-reel .content .sec-persona .close-video-reel-persona .exit-persona {
+  cursor: pointer;
+}
+
+body .reels .card-modal-reel .content .sec-persona .sec-personas {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .reels .card-modal-reel .content .sec-persona .sec-personas .persona {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .reels .card-modal-reel .content .sec-persona .sec-personas .persona .p-name {
+  font-family: "Open Sans Condenced Light";
+  font-size: 16pt;
+  margin-bottom: 2rem;
+}
+
+body .reels .card-modal-reel .content .sec-persona .sec-personas .persona .btn {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 body .reels .sec-video {
@@ -993,6 +1225,7 @@ body .reels .content-area {
 
 body .reels .content-area .reel-type {
   cursor: pointer;
+  height: 145px;
 }
 
 body .reels .content-area div {
@@ -1003,9 +1236,9 @@ body .reels .content-area div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1163,10 +1396,28 @@ body .contactanos .form {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Lato Light";
-  font-size: 20pt;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .contactanos .form {
+    position: relative;
+  }
+}
+
+body .contactanos .form small {
+  position: absolute;
+  bottom: 1rem;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 576px) {
+  body .contactanos .form small {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 body .contactanos .form form {
+  font-size: 20pt;
   width: 45%;
   margin-bottom: 1.5rem;
 }
