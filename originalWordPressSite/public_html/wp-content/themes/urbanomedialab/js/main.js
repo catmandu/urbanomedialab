@@ -62,14 +62,10 @@ $(document).ready(function () {
         })
     })
 
-    $("#to-ultimo").click(function () {
-        $.fn.pagepiling.moveTo('ultimo');
-    })
-
-    $("#to-reels").click(function () {
-        $.fn.pagepiling.moveTo('reels');
-    })
-
+    $("#homeLogo").click(function () {
+        $.fn.pagepiling.moveTo('hero');
+    });
+    
     $(".btn-video").click(function () {
         var pa = $(this).closest(".content");
         $(pa).addClass("mod-video");

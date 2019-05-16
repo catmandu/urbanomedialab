@@ -1,9 +1,6 @@
 (function () {
     
   $('#language').change(function(){
-      var languageName = $('#language option:selected').text();
-      $('input[name="languageName"]').val(languageName);
-
       var selLan = $(this).val();
       assignValues(selLan);
     });

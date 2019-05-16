@@ -22,7 +22,7 @@ get_header();
     </div>
 </div>
 <div id="navbar" class="navbar-top">
-    <img src="wp-content/themes/urbanomedialab/assets/icons/urbano-h.svg" class="img-logo">
+    <img id="homeLogo" src="wp-content/themes/urbanomedialab/assets/icons/urbano-h.svg" class="img-logo">
     <a class="menu-toggler" id="btn-toggle-menu"><i class="fas fa-bars"></i></a>
     <ul class="menu-list" id="menu">
         <li data-menuanchor="hero" class="active">
