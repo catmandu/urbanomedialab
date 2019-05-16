@@ -79,6 +79,20 @@
   margin: 1.5rem 0;
 }
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 20pt;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 20pt;
+    margin: 0.5rem 0;
+  }
+}
+
 .title span {
   border-bottom: 1px solid #9c9c9c;
 }
@@ -176,9 +190,22 @@ body .navbar-top .img-logo {
   max-height: 35px;
 }
 
+@media (max-width: 768px) {
+  body .navbar-top .img-logo {
+    max-height: 29px;
+  }
+}
+
+@media (max-width: 576px) {
+  body .navbar-top .img-logo {
+    max-height: 21px;
+  }
+}
+
 body .navbar-top .menu-toggler {
   display: none;
   padding: 1rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -218,7 +245,8 @@ body .navbar-top .menu-list {
     right: 0;
     text-align: center;
     background-color: #000;
-    border-top: 1px solid #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
   }
 }
 
@@ -248,18 +276,24 @@ body .navbar-top .menu-list {
 body .navbar-top .menu-list li {
   float: left;
   padding: 1rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
   body .navbar-top .menu-list li {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-height: 576px) {
   body .navbar-top .menu-list li {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
+}
+
+body .navbar-top .menu-list li:hover .btn-menu {
+  color: #4f4f4f;
 }
 
 body .navbar-top .menu-list li .btn-menu {
@@ -270,8 +304,14 @@ body .navbar-top .menu-list li .btn-menu {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  body .navbar-top .menu-list li .btn-menu {
+    font-size: 16px;
+  }
+}
+
 body .navbar-top .menu-list li.active a {
-  color: #9c9c9c;
+  color: #9c9c9c !important;
 }
 
 body .papeles {
@@ -595,6 +635,7 @@ body .ultimo .card-modal .content.mod-video .sec-video {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 2rem;
+  opacity: 1;
 }
 
 body .ultimo .card-modal .content.mod-video .sec-video .video {
@@ -730,11 +771,15 @@ body .ultimo .card-modal .content .sec-info .btn-area {
 }
 
 body .ultimo .card-modal .content .sec-video {
-  display: none;
+  display: block;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  position: absolute;
+  opacity: 0;
 }
 
 body .ultimo .card-modal .content .sec-video.up {
@@ -798,7 +843,10 @@ body .reels .card-modal-reel {
   right: 0;
   bottom: 0;
   top: 0;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-transition: all 0.5s ease-in-out;
@@ -1119,6 +1167,24 @@ body .reels .card-modal-reel .content .sec-persona .sec-personas {
           justify-content: space-evenly;
 }
 
+@media (max-width: 768px) {
+  body .reels .card-modal-reel .content .sec-persona .sec-personas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  body .reels .card-modal-reel .content .sec-persona .sec-personas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 body .reels .card-modal-reel .content .sec-persona .sec-personas .persona {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1186,7 +1252,7 @@ body .reels .sec-video .vid-info {
   }
 }
 
-body .reels .sec-video .vid-info .close-video {
+body .reels .sec-video .vid-info .close-video-reel {
   cursor: pointer !important;
 }
 

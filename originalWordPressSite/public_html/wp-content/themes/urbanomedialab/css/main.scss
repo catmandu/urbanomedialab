@@ -89,6 +89,16 @@ $btn-font: 12pt;
   color: $sec;
   margin: 1.5rem 0;
 
+  @media (max-width: 768px) {
+    font-size: $subtitle-font;
+    margin: 0.5rem 0;
+  }
+
+  @media (max-width: 576px) {
+    font-size: $subtitle-font;
+    margin: 0.5rem 0;
+  }
+
   span {
     border-bottom: 1px solid $sec;
   }
@@ -160,11 +170,20 @@ body {
       height: 100%;
       padding-left: 1rem;
       max-height: 35px;
+
+      @media (max-width: 768px) {
+        max-height: 29px;
+      }
+
+      @media (max-width: 576px) {
+        max-height: 21px;
+      }
     }
 
     .menu-toggler {
       display: none;
       padding: 1rem;
+      cursor: pointer;
 
       @media only screen and (max-width: 768px) {
         display: block;
@@ -192,7 +211,8 @@ body {
           right: 0;
           text-align: center;
           background-color: #000;
-          border-top: 1px solid #fff;
+          border-top: 1px solid rgba(255,255,255,0.1);;
+          width: 100%;
         }
       }
 
@@ -214,13 +234,21 @@ body {
       li {
         float: left;
         padding: 1rem;
+        cursor: pointer;
 
         @media only screen and (max-width: 768px) {
-          border-bottom: 1px solid #fff;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+          padding: 0.5rem;
         }
 
         @media only screen and (orientation: landscape) and (max-height: 576px) {
-          border-bottom: 1px solid #fff;
+          border-bottom: 1px solid rgba(255,255,255,0.1);;
+        }
+
+        &:hover {
+          .btn-menu {
+            color:#4f4f4f; 
+          }
         }
 
         .btn-menu {
@@ -229,10 +257,14 @@ body {
           color: $font-color;
           text-decoration: none;
           cursor: pointer;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 16px;
+          }
         }
         &.active {
           a {
-            color: $sec;
+            color: $sec !important;
           }
         }
       }
@@ -475,6 +507,7 @@ body {
             flex-direction: column;
             box-sizing: border-box;
             padding: 0 2rem;
+            opacity: 1;
 
             .video {
               max-height: 400px;
@@ -570,9 +603,11 @@ body {
           }
         }
         .sec-video {
-          display: none;
+          display: block;
           transform: translateY(100%);
-          transition: all 0.5s ease-in;
+          transition: transform 0.5s ease-in;
+          position: absolute;
+          opacity: 0;
 
           &.up {
             transform: translateY(0);
@@ -624,7 +659,8 @@ body {
       right: 0;
       bottom: 0;
       top: 0;
-      display: none;
+      display: flex;
+      opacity: 0;
       transform: translateY(100%);
       transition: all 0.5s ease-in-out;
 
@@ -861,9 +897,16 @@ body {
 
           .sec-personas{
             flex-direction: row;
-              display: flex;
-              width: 100%;
-              justify-content: space-evenly;
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            @media (max-width: 768px) {
+              flex-direction: column;
+            }
+          
+            @media (max-width: 576px) {
+              flex-direction: column;
+            }
 
               .persona {
                 display: flex;
@@ -913,7 +956,7 @@ body {
           }
         }
 
-        .close-video {
+        .close-video-reel {
           cursor: pointer !important;
         }
       }

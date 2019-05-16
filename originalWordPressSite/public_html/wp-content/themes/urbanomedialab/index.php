@@ -43,7 +43,7 @@ get_header();
 
     <div id="her" class="hero section">
         <div class="btns">
-            <i class="fas fa-angle-double-down down-arrows"></i>
+            <i id="to-ultimo" class="fas fa-angle-double-down down-arrows"></i>
         </div>
     </div>
 

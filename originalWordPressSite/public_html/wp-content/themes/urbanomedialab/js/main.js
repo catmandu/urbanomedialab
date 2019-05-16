@@ -52,6 +52,7 @@ $(document).ready(function () {
     
     animation.addEventListener('complete', function () {
         $(".leng").css({ 'opacity': '1' });        
+        $.fn.pagepiling.moveTo('ultimo');
         $.fn.pagepiling.moveTo('hero');
         $("#eng, #esp").click(function (e) {
             
@@ -97,22 +98,19 @@ $(document).ready(function () {
         $(reel).addClass("active back-faded");
         setTimeout(() => {
             $(reel).find(".content").first().addClass("active");
-        }, 100);
+        }, 600);
     })
 
     $(".exit-persona").click(function() {
         var reel = $("#reel-persona");
         
         $(reel).find(".content").first().removeClass("active");
-        $(reel).removeClass("back-faded");
-        setTimeout(() => {
-            $(reel).removeClass("active");
-        }, 600);
-
+        // $(reel).removeClass("back-faded");
         $(reel).find(".sec-persona").first().addClass("down");
         setTimeout(() => {
             $(reel).find(".sec-persona").first().removeClass("down");
-        }, 600);
+            $(reel).removeClass("active");
+        }, 500);
     });
 
     $(".close-video-reel").click(function() {
