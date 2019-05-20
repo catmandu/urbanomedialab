@@ -65,6 +65,10 @@ $(document).ready(function () {
     $("#homeLogo").click(function () {
         $.fn.pagepiling.moveTo('hero');
     });
+
+    $("#to-ultimo").click(function () {
+        $.fn.pagepiling.moveTo('ultimo');
+    });
     
     $(".btn-video").click(function () {
         var pa = $(this).closest(".content");

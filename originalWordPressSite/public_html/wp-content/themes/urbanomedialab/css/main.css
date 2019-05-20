@@ -190,7 +190,7 @@ body .navbar-top .img-logo {
   max-height: 35px;
 }
 
-body .navbar-top .img-logo :hover {
+body .navbar-top .img-logo:hover {
   cursor: pointer;
 }
 
