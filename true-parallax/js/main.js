@@ -15,9 +15,9 @@
 
     window.addEventListener("scroll", () => { scrollFunction() })
 
-    // ScrollReveal().reveal('.item', {
-    //     reset: true
-    // });
+    ScrollReveal().reveal('.item', {
+        reset: true
+    });
     
 })();
 
