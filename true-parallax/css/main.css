@@ -100,15 +100,8 @@
 }
 
 .sec-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-color: #000;
+  padding: 2rem;
 }
 
 /*  */
@@ -119,6 +112,7 @@ body {
   height: 100vh !important;
   background-color: #000;
   color: #fff;
+  overflow-x: hidden;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -454,8 +448,10 @@ body .ultimo {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: ultimo;
-  background-color: #000;
-  padding: 0 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,13 +462,18 @@ body .ultimo {
   z-index: 2;
 }
 
-body .ultimo .work-grid {
+body .ultimo .work-grid .wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5rem;
   grid-row-gap: 2rem;
+  background-image: url("../assets/img/bg_spokes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1rem;
+  padding-bottom: 10.5rem;
 }
 
 @media (max-width: 768px) {
@@ -850,10 +851,8 @@ body .reels {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem;
   height: 100%;
   z-index: 2;
-  margin-top: 8rem;
 }
 
 body .reels .card-modal-reel {
@@ -1281,10 +1280,10 @@ body .reels .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1457,7 +1456,6 @@ body .contactanos {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 2;
-  overflow-y: hidden;
   height: 100%;
 }
 

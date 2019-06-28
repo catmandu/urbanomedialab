@@ -12,6 +12,12 @@
     }
 
     var rellax = new Rellax('.rellax');
+    var hrellax = new Rellax('.hrellax', {
+        speed: -2,
+        horizontal: true,
+        vertical: false,
+        round: true
+    })
 
     window.addEventListener("scroll", () => { scrollFunction() })
 
@@ -187,5 +193,11 @@ $(document).ready(function () {
 
     $('.carrousel-personas').on('afterChange', function (event, slick, currentSlide, nextSlide) {
 
+    });
+
+    $('.hscrolling').paroller();
+
+    $('.item').paroller({
+        factor: 0.2
     });
 });
